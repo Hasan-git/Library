@@ -1,0 +1,35 @@
+.container {
+  .event-time {
+    text-align: left;
+  }
+
+  .friends-harmonic li {
+    float: unset;
+  }
+
+  .calendar .place {
+    font-size: 11px;
+    padding: 0 25px 5px;
+  }
+
+  .friends-harmonic li:first-child {
+    margin-left: -12px;
+  }
+
+  .today-events.calendar .card:last-child .card-header {
+    padding-bottom: 15px;
+  }
+}
+
+.add-ev {
+  left: -5px;
+  top: 8px;
+}
+
+#public-event2 {
+  direction: ltr !important;
+
+  * {
+    direction: ltr !important;
+  }
+}

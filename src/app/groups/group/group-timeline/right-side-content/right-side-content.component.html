@@ -1,0 +1,116 @@
+
+<!-- FRIENDS -->
+<div class="ui-block rtl-fixes">
+  <div class="ui-block-title">
+    <h6 class="title">(86) زملاء متميزون</h6>
+  </div>
+  <div class="ui-block-content">
+    <ul class="widget w-faved-page js-zoom-gallery">
+      <li *ngFor="let friend of friends">
+        <a href="javascript:void(0)">
+          <img src="{{imagesBaseUrl}}{{friend.src}}" alt="author">
+        </a>
+      </li>
+      <li class="all-users">
+        <a href="javascript:void(0)">+60</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- / FRIENDS -->
+
+
+<!-- SUGGESTED FRIENDS -->
+<div class="ui-block suggested-friends">
+  <div class="ui-block-title">
+    <h6 class="title">اقتراحات الأصدقاء</h6>
+    <a href="javascript:void(0)" class="more"><svg class="olymp-three-dots-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+      </svg>
+    </a>
+  </div>
+
+  <ul class="widget w-friend-pages-added notification-list friend-requests">
+
+    <li class="inline-items" *ngFor="let item of suggestedFriends">
+      <div class="author-thumb">
+        <img src="{{imagesBaseUrl}}avatar38-sm.jpg" alt="author">
+      </div>
+      <div class="notification-event">
+        <a href="javascript:void(0)" class="h6 notification-friend">{{item.name}}</a>
+        <span class="chat-message-item">{{item.discription}}</span>
+      </div>
+      <span class="notification-icon">
+        <a href="javascript:void(0)" class="accept-request">
+          <span class="icon-add without-text">
+            <svg class="olymp-happy-face-icon">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use>
+            </svg>
+          </span>
+        </a>
+      </span>
+    </li>
+  </ul>
+
+</div>
+<!-- / SUGGESTED FRIENDS -->
+
+
+<!-- W-Latest-Photo -->
+<div class="ui-block rtl-fixes">
+  <div class="ui-block-title">
+    <h6 class="title">اجدد الملفات</h6>
+  </div>
+  <div class="ui-block-content">
+
+    <ul class="widget w-last-photo js-zoom-gallery">
+      <li>
+        <a href="assets/web/img/last-photo10.jpg">
+          <img src="{{imagesBaseUrl}}last-photo10.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot11.jpg">
+          <img src="{{imagesBaseUrl}}last-phot11.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot12.jpg">
+          <img src="{{imagesBaseUrl}}last-phot12.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot13.jpg">
+          <img src="{{imagesBaseUrl}}last-phot13.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot14.jpg">
+          <img src="{{imagesBaseUrl}}last-phot14.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot15.jpg">
+          <img src="{{imagesBaseUrl}}last-phot15.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot16.jpg">
+          <img src="{{imagesBaseUrl}}last-phot16.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot17.jpg">
+          <img src="{{imagesBaseUrl}}last-phot17.jpg" alt="photo">
+        </a>
+      </li>
+      <li>
+        <a href="assets/web/img/last-phot18.jpg">
+          <img src="{{imagesBaseUrl}}last-phot18.jpg" alt="photo">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- / W-Latest-Photo -->
+

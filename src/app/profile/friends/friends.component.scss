@@ -1,0 +1,25 @@
+.tab {
+  float: right;
+  display: flex;
+
+  .title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #9a9fbf;
+    padding: 0 30px;
+    margin: 0;
+    margin-top: 12px;
+    height: 26px;
+    cursor: pointer;
+    .badge {
+      font-size: 13px;
+    }
+
+    &.active {
+      color: #fc5e3a;
+    }
+    &.border-left {
+      border-left: 1px solid #ccc;
+    }
+  }
+}

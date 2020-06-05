@@ -1,0 +1,64 @@
+.ui-block-content {
+  // background-color: #fff;
+  // border: 1px solid #ddd;
+  box-shadow: 1px 1px 1px #dddddd38;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e6ecf5;
+  margin-bottom: 15px;
+
+  .nav-item {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .fa {
+    font-size: 1.2em;
+  }
+}
+
+.active {
+  color: #ffa100;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.label-floating .form-control,
+.label-floating input,
+.label-floating select {
+  padding: 0.5rem 1.1rem 0.5rem;
+  line-height: 1.75;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  padding-right: 20px;
+}
+.someone_button {
+  color: #336cff;
+  text-decoration: underline;
+  font-size: 12px;
+  padding-right: 20px;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+}
+
+.menu-item {
+  font-size: 14px;
+  font-weight: 700;
+  color: #676576;
+  cursor: pointer;
+}

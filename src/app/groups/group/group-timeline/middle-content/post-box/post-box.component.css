@@ -1,0 +1,11 @@
+.post .control-block-button {
+  top: 20px;
+  right: unset;
+  left: -17px !important;
+  left: -14px !important;
+}
+
+.post-additional-info {
+  text-align: left;
+  direction: ltr;
+}

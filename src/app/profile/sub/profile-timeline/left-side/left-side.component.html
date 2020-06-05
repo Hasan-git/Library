@@ -1,0 +1,81 @@
+<!-- CALENDAR -->
+<div class="ui-block">
+  <div class="ui-block-title">
+    <h6 class="title">الرزنامة</h6>
+  </div>
+  <div class="ui-block-content pr-2 pt-3">
+
+    <ol class="widget w-playlist without-cover events">
+      <li *ngFor="let event of calendar" class="js-open-popup pl-0 pr-1" data-popup-target=".playlist-popup">
+        <div class="playlist-thumb m-0" data-toggle="tooltip" data-placement="top" title="Open event">
+          <a href="javascript:void(0)" class="play-icon">
+            <svg class="olymp-small-calendar-icon">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-small-calendar-icon"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="composition">
+          <a href="javascript:void(0)" class="composition-name">{{event.title}}</a>
+          <a href="javascript:void(0)" class="composition-author">
+            <span>
+              {{event.from | date : 'h:mm'}}
+            </span>
+            <span><i class="fa fa-long-arrow-alt-left"></i></span>
+            <span>
+              {{event.to | date : 'h:mm'}}
+            </span>
+          </a>
+        </div>
+
+        <div class="composition-time">
+          <time class="published" datetime="2017-03-24T18:18"></time>
+          <div class="more">
+            <svg class="olymp-three-dots-icon">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+            </svg>
+            <!-- <ul class="more-dropdown">
+              <li>
+                <a href="javascript:void(0)">Add Song to Player</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Add Playlist to Player</a>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+
+      </li>
+    </ol>
+
+  </div>
+</div>
+<!-- / CALENDAR -->
+
+
+<!-- MOST READED BLOGS -->
+<div class="ui-block">
+  <div class="ui-block-title">
+    <h6 class="title">الاكثر قراءة</h6>
+  </div>
+
+  <ul class="widget w-blog-posts">
+    <li *ngFor="let item of mostReadedBlogs">
+      <article class="hentry post">
+
+        <a href="javascript:void(0)" class="h4">{{item.title}}</a>
+
+        <p>{{item.content}}</p>
+
+        <div class="post__date">
+          <time class="published" datetime="2017-03-24T18:18">
+            {{item.from}}
+          </time>
+        </div>
+
+      </article>
+    </li>
+  </ul>
+
+</div>
+<!-- / MOST READED BLOGS -->

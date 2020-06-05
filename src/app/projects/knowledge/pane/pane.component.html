@@ -1,0 +1,111 @@
+<div>
+  <div class="pane-header" fxLayout="row" fxLayoutAlign="end center">
+    <!-- <mat-icon>close</mat-icon> -->
+    <mat-icon class="pane-close">close</mat-icon>
+  </div>
+  <div class="pane-body" fxLayout="column">
+    <div class="tab" fxLayout="row">
+
+      <mat-tab-group>
+        <mat-tab label="تفاصيل">
+
+          <div fxLayout="column" class="pt-2">
+
+            <div fxLayout="row" class="pane-details">
+              <div class="pane-label">نوع الملف :</div>
+              <div class="">مجلد</div>
+            </div>
+
+            <div fxLayout="row" class="pane-details">
+              <div class="pane-label">الملكية:</div>
+              <div class="">ستيف ارثر</div>
+            </div>
+
+            <div fxLayout="row" class="pane-details">
+              <div class="pane-label"> تاريخ الإنشاء :</div>
+              <div class="">20 Dec 2012</div>
+            </div>
+
+            <div fxLayout="row" class="pane-details">
+              <div class="pane-label">تاريخ التعديل :</div>
+              <div class="">20 Dec 2012</div>
+            </div>
+
+            <div fxLayout="column" class="pane-details">
+              <div class="pane-label">علامات:</div>
+              <div class="">
+                <input class="form-control" type="text" placeholder="">
+              </div>
+            </div>
+          </div>
+
+        </mat-tab>
+        <mat-tab label="تعليقات">
+
+          <!-- COMMENT -->
+          <div class="ui-block-title rtl-dir-fixes rtl-fixes p-1">
+
+            <!-- RESULT -->
+            <div class="birthday-item inline-items p-0 pt-2" fxLayout="row">
+
+              <div class="author-thumb" style="margin-right: 5px;">
+                <img src="{{imagesBaseUrl}}avatar19-sm.jpg" alt="author">
+              </div>
+
+              <!-- DETAILS -->
+              <div class="birthday-author-name">
+
+                <div fxLayout="column" class="pr-1">
+                  <a href="javascript:void(0)" class="h6 author-name mb-1">جيسيكا ستيفنز</a>
+                  <div class="mb-1" fxLayout="row">
+                    <div class="birthday-date"> الملف يحتوي على بعض الاخطاء , لذا رجاءا مراجعة الملف من جديد</div>
+                  </div>
+                  <div>
+                    <mat-icon style="font-size: 12px;  height: 18px; width: 17px;">access_time</mat-icon>
+                    <span>منذ يومين</span>
+                  </div>
+                </div>
+                <!-- DETAILS -->
+
+              </div>
+              <!-- / DETAILS -->
+
+            </div>
+            <!-- / RESULT -->
+
+          </div>
+          <!-- / COMMENT -->
+
+          <!-- ADD COMMENT -->
+          <div class="birthday-item inline-items p-0 pt-2" fxLayout="row">
+
+            <div class="author-thumb" style="margin-right: 5px; width: unset;">
+              <img src="{{imagesBaseUrl}}avatar50-sm.jpg" alt="author">
+            </div>
+
+            <!-- DETAILS -->
+            <div class="birthday-author-name">
+
+              <div fxLayout="column" class="pr-1">
+                <input class="form-control" type="text" placeholder="">
+                <div class="mb-1" fxLayout="row">
+                  <button class="btn btn-grey-light btn-sm">اضف</button>
+                </div>
+
+              </div>
+              <!-- DETAILS -->
+
+            </div>
+            <!-- / DETAILS -->
+
+          </div>
+          <!-- ADD COMMENT -->
+
+        </mat-tab>
+      </mat-tab-group>
+
+    </div>
+    <div class="content"></div>
+  </div>
+
+</div>

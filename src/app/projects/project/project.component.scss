@@ -1,0 +1,25 @@
+.ui-block-content {
+  // background-color: #fff;
+  // border: 1px solid #ddd;
+  box-shadow: 1px 1px 1px #dddddd38;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e6ecf5;
+  margin-bottom: 15px;
+
+  .nav-item {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .fa {
+    font-size: 1.2em;
+  }
+}
+
+.active {
+  color: #ffa100;
+  font-weight: 500;
+  font-size: 15px;
+}

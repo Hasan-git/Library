@@ -1,0 +1,72 @@
+.name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #515365;
+  cursor: pointer;
+}
+
+.badge {
+  color: #515365;
+  font-size: 11px;
+  padding: 0.25rem !important;
+}
+
+.divier {
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.notification-list li {
+  padding: 15px;
+}
+
+.statistics-list-count .indicator {
+  font-size: 12px;
+}
+
+.statistics-list-count .points span {
+  font-size: 15px;
+}
+
+.ui-block-title .more {
+  padding-left: 00;
+}
+.ui-block-title .points {
+  font-size: 10px;
+}
+
+.bootstrap-select.without-border > .dropdown-toggle {
+  font-size: 10px;
+}
+
+.monthly-count {
+  margin-right: 13px;
+}
+
+.monthly-indicator .btn-control {
+  float: left;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.monthly-indicator-wrap .monthly-indicator {
+  margin: 0 0px 30px 0;
+  float: right;
+  display: flex;
+}
+
+.notification-list{
+  padding: 10px 0;
+}
+
+.w-friend-pages-added .notification-friend {
+  font-size: 14px;
+  margin: 5px 5px 0 0;
+}
+
+
+.notification-list .selectize-dropdown-content > *, .notification-list li {
+  border-bottom: none;
+}

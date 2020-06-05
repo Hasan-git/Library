@@ -1,0 +1,230 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="ui-block responsive-flex friends-header">
+        <div class="ui-block-title">
+          <form class="w-search">
+            <div class="form-group with-button">
+              <input class="form-control rtl-fixes" type="text" placeholder="ابحث عن صديق">
+              <button>
+                <svg class="olymp-magnifying-glass-icon">
+                  <use attr.xlink:href="{{svgUrl}}/svg-icons/sprites/icons.svg#olymp-magnifying-glass-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="tab">
+            <div class="h6 title" [ngClass]="{'active': currentView == viewsEnum.following }" (click)="currentView = viewsEnum.following "> <span class="badge">(170)</span> أتابع</div>
+            <div class="h6 title border-left" [ngClass]="{'active': currentView == viewsEnum.followers }" (click)="currentView = viewsEnum.followers "> <span class="badge">(82)</span> متابعين</div>
+          </div>
+          <!-- <div class="more">
+            <svg class="olymp-three-dots-icon">
+              <use attr.xlink:href="{{svgUrl}}/svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+            </svg>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOLLOWERS -->
+<div class="container" *ngIf="currentView == viewsEnum.followers"
+  [@fadeInRightOnEnter]
+  [@fadeOutLeftOnLeave]>
+  <div class="row">
+    <div class="col col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12" *ngFor="let friend of followers;">
+      <div class="ui-block">
+
+        <!-- Friend Item -->
+        <div class="friend-item">
+          <div class="friend-header-thumb">
+            <img src="{{imagesBaseUrl}}/bg-users.png" alt="friend">
+          </div>
+
+          <div class="friend-item-content">
+
+            <div class="more">
+              <svg class="olymp-three-dots-icon">
+                <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+              </svg>
+              <ul class="more-dropdown">
+                <li>
+                  <a href="javascript:void(0)">Report Profile</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Block Profile</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Turn Off Notifications</a>
+                </li>
+              </ul>
+            </div>
+            <div class="friend-avatar">
+              <div class="author-thumb">
+                <img src="{{imagesBaseUrl}}/{{friend.src}}" alt="author">
+              </div>
+              <div class="author-content">
+                <a href="javascript:void(0)" class="h5 author-name">{{friend.name}}</a>
+                <div class="country">{{friend.labor}}</div>
+              </div>
+            </div>
+
+            <div class="swiper-container" data-slide="fade">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="friend-count" data-swiper-parallax="-500">
+                    <a href="javascript:void(0)" class="friend-count-item">
+                      <div class="h6">{{friend.commentsCount}}</div>
+                      <div class="title">مشاركات</div>
+                    </a>
+                    <a href="javascript:void(0)" class="friend-count-item">
+                      <div class="h6">{{friend.followingCount}}</div>
+                      <div class="title">يتبع</div>
+                    </a>
+                    <a href="javascript:void(0)" class="friend-count-item">
+                      <div class="h6">{{friend.followersCount}}</div>
+                      <div class="title">المتابعين</div>
+                    </a>
+                  </div>
+                  <div class="control-block-button" data-swiper-parallax="-100">
+                    <a href="javascript:void(0)" class="btn btn-control bg-blue">
+                      <svg class="olymp-happy-face-icon">
+                        <use attr.xlink:href="{{svgUrl}}/svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use>
+                      </svg>
+                    </a>
+
+                    <a href="javascript:void(0)" class="btn btn-control bg-purple">
+                      <svg class="olymp-chat---messages-icon">
+                        <use attr.xlink:href="{{svgUrl}}/svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use>
+                      </svg>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="friend-about" data-swiper-parallax="-500">
+                    {{friend.description}}
+                  </p>
+
+                  <div class="friend-since" data-swiper-parallax="-100">
+                    <span>Friends Since:</span>
+                    <div class="h6">December 2014</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... end Friend Item -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / FOLLOWERS -->
+
+<!-- FOLLOWING -->
+<div class="container" *ngIf="currentView == viewsEnum.following"
+  [@fadeInRightOnEnter]
+  [@fadeOutLeftOnLeave]>
+  <div class="row">
+    <div class="col col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12" *ngFor="let friend of following;">
+      <div class="ui-block">
+
+        <!-- Friend Item -->
+        <div class="friend-item">
+          <div class="friend-header-thumb">
+            <img src="{{imagesBaseUrl}}/bg-users.png" alt="friend">
+          </div>
+
+          <div class="friend-item-content">
+
+            <div class="more">
+              <svg class="olymp-three-dots-icon">
+                <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+              </svg>
+              <ul class="more-dropdown">
+                <li>
+                  <a href="javascript:void(0)">Report Profile</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Block Profile</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Turn Off Notifications</a>
+                </li>
+              </ul>
+            </div>
+            <div class="friend-avatar">
+              <div class="author-thumb">
+                <img src="{{imagesBaseUrl}}/{{friend.src}}" alt="author">
+              </div>
+              <div class="author-content">
+                <a href="javascript:void(0)" class="h5 author-name">{{friend.name}}</a>
+                <div class="country">{{friend.labor}}</div>
+              </div>
+            </div>
+
+            <div class="swiper-container" data-slide="fade">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="friend-count" data-swiper-parallax="-500">
+                    <a href="javascript:void(0)" class="friend-count-item">
+                      <div class="h6">{{friend.commentsCount}}</div>
+                      <div class="title">مشاركات</div>
+                    </a>
+                    <a href="javascript:void(0)" class="friend-count-item">
+                      <div class="h6">{{friend.followingCount}}</div>
+                      <div class="title">يتبع</div>
+                    </a>
+                    <a href="javascript:void(0)" class="friend-count-item">
+                      <div class="h6">{{friend.followersCount}}</div>
+                      <div class="title">المتابعين</div>
+                    </a>
+                  </div>
+                  <div class="control-block-button" data-swiper-parallax="-100">
+                    <a href="javascript:void(0)" class="btn btn-control bg-blue">
+                      <svg class="olymp-happy-face-icon">
+                        <use attr.xlink:href="{{svgUrl}}/svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use>
+                      </svg>
+                    </a>
+
+                    <a href="javascript:void(0)" class="btn btn-control bg-purple">
+                      <svg class="olymp-chat---messages-icon">
+                        <use attr.xlink:href="{{svgUrl}}/svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use>
+                      </svg>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="friend-about" data-swiper-parallax="-500">
+                    {{friend.description}}
+                  </p>
+
+                  <div class="friend-since" data-swiper-parallax="-100">
+                    <span>Friends Since:</span>
+                    <div class="h6">December 2014</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... end Friend Item -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / FOLLOWING -->

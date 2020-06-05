@@ -1,0 +1,19 @@
+.fixed-sidebar.right{
+    left:0;
+}
+.fixed-sidebar.open .fixed-sidebar-right.sidebar--small {
+    -webkit-transform: translateX(100%);
+    transform: translateX(-100%);
+}
+
+.fixed-sidebar.open .fixed-sidebar-right.sidebar--large {
+    -webkit-transform: translateX(0);
+    transform: translateX(74%);
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.fixed-sidebar-right.sidebar--large {
+    width: 270px;
+    -webkit-transform: translateX(100%);
+    transform: translateX(-30%);
+}

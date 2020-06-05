@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="ui-block">
+        <div class="top-header top-header-favorit">
+          <div class="top-header-thumb">
+
+            <app-header-statistics></app-header-statistics>
+
+            <div class="top-header-author">
+              <div class="author-content rtl-fixes pr-2">
+                <a href="javascript:void(0)" class="h3 author-name">سامي كريم</a>
+                <div class="country">سان فرانسيسكو، كاليفورنيا</div>
+              </div>
+              <div class="author-thumb">
+                <img src="{{imagesBaseUrl}}profile-small.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="profile-section">
+            <div class="row rtl-dir-fixes">
+              <div class="col col-xl-8 m-auto col-lg-8 col-md-12">
+                <ul class="profile-menu">
+                  <li>
+                    <a [routerLink]="['/profile']" [routerLinkActive]="['active']"
+                      [routerLinkActiveOptions]="{exact: true}">الجدول الزمني</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/profile','file']" [routerLinkActive]="['active']">ملفي</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/profile','friends']" [routerLinkActive]="['active']">زملاء</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/profile','file-manager']" [routerLinkActive]="['active']">مستندات</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/profile','blogs']" [routerLinkActive]="['active']">مدونات</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/profile','calendar']" [routerLinkActive]="['active']">التقويم و احداث</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- <div class="control-block-button">
+							<a href="javascript:void(0)" class="btn btn-control bg-primary">
+								<svg class="olymp-star-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-star-icon"></use></svg>
+							</a>
+
+							<a href="javascript:void(0)" class="btn btn-control bg-purple">
+								<svg class="olymp-chat---messages-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
+							</a>
+
+						</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

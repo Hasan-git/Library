@@ -1,0 +1,30 @@
+.icon-views {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.breadcrumb {
+  padding-right: 29px;
+  // padding-bottom: 25px;
+  font-size: 15px;
+}
+
+.ui-block-content {
+  font-size: 14px;
+}
+
+.detail {
+  margin-top: 15px;
+  display: flex;
+
+  .card-label {
+    font-weight: 700;
+    width: 110px;
+  }
+}
+
+.title{
+  cursor: pointer;
+}

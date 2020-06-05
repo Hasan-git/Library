@@ -1,0 +1,616 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="ui-block responsive-flex">
+        <div class="ui-block-title">
+          <ul class="nav nav-tabs calendar-events-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#events" role="tab">
+                التقويم
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#notifications" role="tab">
+                دعوات للانضمام<span class="items-round-little bg-breez">2</span>
+              </a>
+            </li>
+
+          </ul>
+          <!-- <a href="javascript:void(0)" class="more"><svg class="olymp-three-dots-icon"><use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use></svg></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tab panes -->
+<div class="tab-content" *ngIf="load" >
+  <div class="tab-pane active" id="events" role="tabpanel">
+
+    <div class="container">
+      <div class="row">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+          <div class="ui-block">
+
+
+            <!-- Today Events -->
+
+            <div class="today-events calendar">
+              <div class="today-events-thumb">
+                <div class="date">
+                  <div class="day-number">26</div>
+                  <div class="day-week">يوم السبت</div>
+                  <div class="month-year">مارس, 2016</div>
+                </div>
+              </div>
+
+              <div class="list">
+                <div class="control-block-button">
+                  <a href="javascript:void(0)" class="btn btn-control bg-breez" data-toggle="modal" data-target="#create-event">
+                    <svg class="olymp-plus-icon">
+                      <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-plus-icon"></use>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="day-event" id="accordion-1" data-month="12" data-day="2">
+
+                  <div class="card">
+                    <div class="card-header" id="headingOne-1">
+
+                      <div class="event-time">
+                        <time datetime="2004-07-24T18:18">9:00am</time>
+                        <div class="more"><svg class="olymp-three-dots-icon">
+                            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+                          </svg>
+                          <ul class="more-dropdown">
+                            <li>
+                              <a href="javascript:void(0)">Mark as Completed</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)">Delete Event</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <h5 class="mb-0 title">
+                        <a href="javascript:void(0)" data-toggle="collapse" data-target="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne">
+                          الإفطار في الوكالة
+                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          <span class="event-status-icon" data-toggle="modal" data-target="#public-event">
+                            <svg class="olymp-calendar-icon" data-toggle="tooltip" data-placement="top" data-original-title="UNCOMPLETED">
+                              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </h5>
+                    </div>
+
+                    <div id="#collapseOne-1" class="collapse show" aria-labelledby="headingOne" data-parent="#headingOne-1">
+                      <div class="card-body">
+                        اهلا ياجماعة! أقترح الحصول على شهادة في وقت سابق في الوكالة لتناول وجبة الإفطار والتحدث أكثر قليلاً عن مشروع التصميم الجديد الذي نعمل عليه.
+                      </div>
+                      <div class="place inline-items">
+                        <svg class="olymp-add-a-place-icon">
+                          <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-add-a-place-icon"></use>
+                        </svg>
+                        <span>وكالة أحلام اليقظة</span>
+                      </div>
+
+                      <ul class="friends-harmonic inline-items">
+                        <li>
+                          <a href="javascript:void(0)">
+                            <img src="{{imagesBaseUrl}}friend-harmonic5.jpg" alt="friend">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">
+                            <img src="{{imagesBaseUrl}}friend-harmonic10.jpg" alt="friend">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">
+                            <img src="{{imagesBaseUrl}}friend-harmonic7.jpg" alt="friend">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">
+                            <img src="{{imagesBaseUrl}}friend-harmonic8.jpg" alt="friend">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">
+                            <img src="{{imagesBaseUrl}}friend-harmonic2.jpg" alt="friend">
+                          </a>
+                        </li>
+                        <li class="with-text">
+                          سيساعد
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingTwo-1">
+
+                      <div class="event-time">
+                        <time datetime="2004-07-24T18:18">12:00pm</time>
+                        <div class="more"><svg class="olymp-three-dots-icon">
+                            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+                          </svg>
+                          <ul class="more-dropdown">
+                            <li>
+                              <a href="javascript:void(0)">Mark as Completed</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)">Delete Event</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <h5 class="mb-0 title">
+                        <a href="javascript:void(0)" data-toggle="collapse" data-target="#collapseTwo-1" aria-expanded="true" aria-controls="collapseOne">
+                          إرسال ملفات المشروع الجديدة إلى الوكالة
+                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          <span class="event-status-icon" data-toggle="modal" data-target="#public-event">
+                            <svg class="olymp-calendar-icon" data-toggle="tooltip" data-placement="top" data-original-title="UNCOMPLETED">
+                              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </h5>
+                    </div>
+
+                    <div id="collapseTwo-1" class="collapse" aria-labelledby="headingOne" data-parent="#headingOne-1">
+                      <div class="card-body">
+                        اهلا ياجماعة! أقترح الذهاب قبل ذلك بقليل في الوكالة لتناول وجبة الإفطار والتحدث أكثر قليلاً عن مشروع التصميم الجديد الذي نعمل عليه. في صحتك!
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingThree-1">
+
+                      <div class="event-time">
+                        <time datetime="2004-07-24T18:18">6:30pm</time>
+                        <div class="more"><svg class="olymp-three-dots-icon">
+                            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+                          </svg>
+                          <ul class="more-dropdown">
+                            <li>
+                              <a href="javascript:void(0)">Mark as Completed</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)">Delete Event</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <h5 class="mb-0 title">
+                        <a href="javascript:void(0)" data-toggle="collapse" data-target="#collapseThree-1" aria-expanded="true" aria-controls="collapseOne">
+                          تأخذ ابنة إلى الطبيب البيطري
+                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          <span class="event-status-icon" data-toggle="modal" data-target="#public-event">
+                            <svg class="olymp-calendar-icon" data-toggle="tooltip" data-placement="top" data-original-title="UNCOMPLETED">
+                              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </h5>
+                    </div>
+
+                    <div class="place inline-items">
+                      <svg class="olymp-add-a-place-icon">
+                        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-add-a-place-icon"></use>
+                      </svg>
+                      <span>وكالة أحلام اليقظة</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ... end Today Events -->
+          </div>
+        </div>
+        <!-- / LEFT SIDEBAR -->
+
+        <!-- FULL CALENDAR -->
+        <div class="col col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+          <div class="ui-block">
+
+
+            <!-- Full Calendar -->
+
+            <div id="calendar" class="crumina-full-calendar">
+
+              <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">الأربعاء ، 30 مارس</h6>
+              </div>
+
+              <div class="today-events calendar">
+                <div class="list">
+
+                  <div class="control-block-button">
+
+                    <a href="javascript:void(0)" class="btn btn-control bg-breez" data-toggle="modal" data-target="#create-event">
+                      <svg class="olymp-plus-icon">
+                        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-plus-icon"></use>
+                      </svg>
+                    </a>
+
+                  </div>
+
+                  <div id="accordion-3" aria-multiselectable="true" class="day-event">
+
+                    <div class="card">
+                      <div class="card-header" id="headingOne-3">
+                        <div class="event-time">
+                          <time class="published" datetime="2017-03-24T18:18">10:50am</time>
+                          <div class="more">
+                            <svg class="olymp-three-dots-icon">
+                              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+                            </svg>
+                            <ul class="more-dropdown">
+                              <li>
+                                <a href="javascript:void(0)">Mark as Completed</a>
+                              </li>
+                              <li>
+                                <a href="javascript:void(0)">Delete Event</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <h5 class="mb-0 title">
+                          <a href="javascript:void(0)" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            بالفيديو للتحدث مع عميل الوكالة الجديد<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <span class="event-status-icon" data-toggle="modal" data-target="#public-event">
+                              <svg class="olymp-calendar-icon" data-toggle="tooltip" data-placement="top" data-original-title="UNCOMPLETED">
+                                <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                              </svg>
+                            </span>
+                          </a>
+                        </h5>
+                      </div>
+
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#headingOne-3">
+                        <div class="card-body">
+                          يجب أن أتذكر أنني كنت قبل ذلك بقليل في الوكالة لأناقش مع اللاعبين جميع الأسئلة التي نطرحها على عميلنا الجديد وأن نظهر لهم الشعار الجديد.
+                        </div>
+                        <div class="place inline-items">
+                          <svg class="olymp-add-a-place-icon">
+                            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-add-a-place-icon"></use>
+                          </svg>
+                          <span>وكالة أحلام اليقظة</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header" id="headingThree-3">
+                        <div class="event-time">
+                          <time class="published" datetime="2017-03-24T18:18">10:50am</time>
+                          <div class="more">
+                            <svg class="olymp-three-dots-icon">
+                              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+                            </svg>
+                            <ul class="more-dropdown">
+                              <li>
+                                <a href="javascript:void(0)">Mark as Completed</a>
+                              </li>
+                              <li>
+                                <a href="javascript:void(0)">Delete Event</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <h5 class="mb-0 title">
+                          <a href="javascript:void(0)" class="collapsed" data-toggle="collapse" data-target="#collapseThree-3" aria-expanded="false" aria-controls="collapseThree-3">
+                            حفلة عيد ميلاد جيني<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <span class="event-status-icon" data-toggle="modal" data-target="#private-event">
+                              <svg class="olymp-calendar-icon" data-toggle="tooltip" data-placement="top" data-original-title="UNCOMPLETED">
+                                <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                              </svg>
+                            </span>
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseThree-3" class="collapse" aria-labelledby="headingThree" data-parent="#headingOne-3">
+                        <div class="card-body">
+                          اهلا ياجماعة! أقترح الذهاب قبل ذلك بقليل في الوكالة لتناول وجبة الإفطار والتحدث أكثر قليلاً عن مشروع التصميم الجديد الذي نعمل عليه. في صحتك!
+                        </div>
+                        <div class="place inline-items">
+                          <svg class="olymp-add-a-place-icon">
+                            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-add-a-place-icon"></use>
+                          </svg>
+                          <span>وكالة أحلام اليقظة</span>
+                        </div>
+
+                        <ul class="friends-harmonic inline-items">
+                          <li>
+                            <a href="javascript:void(0)">
+                              <img src="{{imagesBaseUrl}}friend-harmonic5.jpg" alt="friend">
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0)">
+                              <img src="{{imagesBaseUrl}}friend-harmonic10.jpg" alt="friend">
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0)">
+                              <img src="{{imagesBaseUrl}}friend-harmonic7.jpg" alt="friend">
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0)">
+                              <img src="{{imagesBaseUrl}}friend-harmonic8.jpg" alt="friend">
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0)">
+                              <img src="{{imagesBaseUrl}}friend-harmonic2.jpg" alt="friend">
+                            </a>
+                          </li>
+                          <li class="with-text">
+                            سيساعد
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ... end Full Calendar -->
+          </div>
+        </div>
+        <!-- / FULL CALENDAR -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- INVITES -->
+  <div class="tab-pane" id="notifications" role="tabpanel">
+    <div class="container">
+      <div class="row">
+
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="ui-block">
+
+
+            <table class="event-item-table event-item-table-fixed-width">
+
+              <thead>
+
+                <tr>
+
+                  <th class="author">
+                    NOTIFICATION
+                  </th>
+
+                  <th class="location">
+                    PLACE
+                  </th>
+
+                  <th class="upcoming">
+                    DATE
+                  </th>
+
+                  <th class="description">
+                    DESCRIPTION
+                  </th>
+
+                  <th class="users">
+                    ASSISTANTS
+                  </th>
+
+                  <th class="add-event">
+
+                  </th>
+                </tr>
+
+              </thead>
+
+              <tbody>
+                <tr class="event-item">
+                  <td class="author">
+                    <div class="event-author inline-items">
+                      <div class="author-thumb">
+                        <img src="{{imagesBaseUrl}}avatar62-sm.jpg" alt="author">
+                      </div>
+                      <div class="author-date">
+                        <a href="javascript:void(0)" class="author-name h6">Mathilda Brinker</a> invited you <br> to an event <a href="javascript:void(0)">Reunion Dinner.</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="location">
+                    <div class="place inline-items">
+                      <svg class="olymp-add-a-place-icon">
+                        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-add-a-place-icon"></use>
+                      </svg>
+                      <span>Panucci Restaurant</span>
+                    </div>
+                  </td>
+                  <td class="upcoming">
+                    <div class="date-event inline-items align-left">
+                      <svg class="olymp-small-calendar-icon">
+                        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-small-calendar-icon"></use>
+                      </svg>
+
+                      <span class="month">Aug 14, 2016 at 7:00pm</span>
+
+                    </div>
+                  </td>
+                  <td class="description">
+                    <p class="description">Hey! I thought we could all get together and grab something to eat to remember old times!</p>
+                  </td>
+                  <td class="users">
+                    <ul class="friends-harmonic">
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic5.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic10.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic7.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic8.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic2.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="all-users bg-breez">+24</a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="add-event">
+                    <a href="20-CalendarAndEvents-MonthlyCalendar.html" class="btn btn-breez btn-sm">Add to Calendar</a>
+                    <a href="javascript:void(0)" class="btn btn-sm btn-border-think custom-color c-grey">Decline / Delete</a>
+                  </td>
+                </tr>
+                <tr class="event-item">
+                  <td class="author">
+                    <div class="event-author inline-items">
+                      <div class="author-thumb">
+                        <img src="{{imagesBaseUrl}}avatar78-sm.jpg" alt="author">
+                      </div>
+                      <div class="author-date">
+                        <a href="javascript:void(0)" class="author-name h6">Walter Havock </a>invited you to <br> an event <a href="javascript:void(0)"> Daydreamz New <br> Year’s Party.</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="location">
+                    <div class="place inline-items">
+                      <svg class="olymp-add-a-place-icon">
+                        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-add-a-place-icon"></use>
+                      </svg>
+                      <span>Daydreamz Agency</span>
+                    </div>
+                  </td>
+                  <td class="upcoming">
+                    <div class="date-event inline-items align-left">
+                      <svg class="olymp-small-calendar-icon">
+                        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-small-calendar-icon"></use>
+                      </svg>
+
+                      <span class="month">Dec 29, 2016 at 7:00pm</span>
+
+                    </div>
+                  </td>
+                  <td class="description">
+                    <p class="description">Let’s celebrate the new year together! We are organizing a big party for all the agency...</p>
+                  </td>
+                  <td class="users">
+                    <ul class="friends-harmonic">
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic5.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic10.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic7.jpg" alt="friend">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <img src="{{imagesBaseUrl}}friend-harmonic8.jpg" alt="friend">
+                        </a>
+                      </li>
+
+                    </ul>
+                  </td>
+                  <td class="add-event">
+                    <a href="20-CalendarAndEvents-MonthlyCalendar.html" class="btn btn-breez btn-sm">Add to Calendar</a>
+                    <a href="javascript:void(0)" class="btn btn-sm btn-border-think custom-color c-grey">Decline / Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / INVITES -->
+
+</div>
+
+
+
+<!-- JS Scripts -->
+<!-- <script src="js/jQuery/jquery-3.4.1.js"                                              ></script>
+<script src="js/libs/jquery.appear.js"                                                  ></script>
+<script src="js/libs/jquery.mousewheel.js"                                                ></script>
+<script src="js/libs/perfect-scrollbar.js"                                             ></script>
+<script src="js/libs/jquery.matchHeight.js"                                              ></script>
+<script src="js/libs/svgxuse.js"                                            ></script>
+<script src="js/libs/imagesloaded.pkgd.js"                                            ></script>
+<script src="js/libs/Headroom.js"                                           ></script>
+<script src="js/libs/velocity.js"                                           ></script>
+<script src="js/libs/ScrollMagic.js"                                            ></script>
+<script src="js/libs/jquery.waypoints.js"                                           ></script>
+<script src="js/libs/jquery.countTo.js"                                           ></script>
+<script src="js/libs/popper.min.js"                                           ></script>
+<script src="js/libs/material.min.js"                                           ></script>
+<script src="js/libs/bootstrap-select.js"                                           ></script>
+<script src="js/libs/smooth-scroll.js"                                            ></script>
+<script src="js/libs/selectize.js"                                            ></script>
+<script src="js/libs/swiper.jquery.js"                                            ></script>
+<script src="js/libs/moment.js"                                   ></script>
+<script src="js/libs/daterangepicker.js"                                    ></script>
+<script src="js/libs/fullcalendar.js"                                   ></script>
+<script src="js/libs/isotope.pkgd.js"                                   ></script>
+<script src="js/libs/ajax-pagination.js"                                    ></script>
+<script src="js/libs/Chart.js"                                                        ></script>
+<script src="js/libs/chartjs-plugin-deferred.js"                                    ></script>
+<script src="js/libs/circle-progress.js"                                    ></script>
+<script src="js/libs/loader.js"                                           ></script>
+<script src="js/libs/run-chart.js"                                            ></script>
+<script src="js/libs/jquery.magnific-popup.js"                                            ></script>
+<script src="js/libs/jquery.gifplayer.js"                                           ></script>
+<script src="js/libs/mediaelement-and-player.js"                                            ></script>
+<script src="js/libs/mediaelement-playlist-plugin.min.js"                                           ></script>
+<script src="js/libs/ion.rangeSlider.js"                                            ></script>
+<script src="js/libs/leaflet.js"                                            ></script>
+<script src="js/libs/MarkerClusterGroup.js"                                           ></script>
+
+<script src="js/main.js"                                            ></script>
+<script src="js/libs-init/libs-init.js"                                           ></script>
+<script src="fonts/fontawesome-all.js"                                            ></script>
+
+<script src="Bootstrap/dist/js/bootstrap.bundle.js"                                           ></script> -->

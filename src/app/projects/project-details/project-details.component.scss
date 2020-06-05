@@ -1,0 +1,43 @@
+.panel {
+  box-shadow: 1px 1px 1px #dddddd38;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e6ecf5;
+  margin-bottom: 15px;
+}
+
+.ui-block-content.details {
+  .detail {
+    margin-top: 15px;
+    display: flex;
+
+    .card-label {
+      font-weight: 700;
+      width: 160px;
+    }
+  }
+
+  .title {
+    cursor: pointer;
+  }
+}
+
+.js-zoom-gallery-fixed li {
+  width: 75px;
+}
+
+.upload-item {
+  border: 1px solid #ddd;
+  width: 71px;
+  height: 71px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .fa-camera {
+    margin: 0;
+    position: unset;
+  }
+}

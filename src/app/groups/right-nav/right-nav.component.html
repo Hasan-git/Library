@@ -1,0 +1,67 @@
+<div class="rtl-fixes rtl-dir-fixes ui-block-content">
+
+  <!-- ITEM -->
+  <div fxLayout="column">
+
+    <div class="nav-item" [routerLink]="['/groups','1','group']" [routerLinkActive]="['active']">
+      <i class="fa fa-comments ml-3"></i> نقاشات
+    </div>
+
+    <div class="nav-item" [routerLink]="['/groups','1','xxxxxx']" [routerLinkActive]="['active']">
+      <i class="fa fa-comments ml-3"></i>
+      حول المجموعة
+    </div>
+
+    <div class="nav-item" [routerLink]="['/groups','1','xxxxxx']" [routerLinkActive]="['active']">
+      <i class="fa fa-database ml-3"></i>
+      الاعضاء
+    </div>
+
+    <div class="nav-item" [routerLink]="['/groups','1','xxxxxxx']" [routerLinkActive]="['active']">
+      <i class="fa fa-info ml-3"></i>
+      ملفات
+    </div>
+  </div>
+  <!-- ITEM -->
+
+  <div class="form-group label-floating is-empty mt-3">
+    <input class="form-control" type="text" placeholder="بحث" autocomplete="off">
+  </div>
+
+  <div class="mt-2" fxLayout="column">
+
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      <span class="title">ترتيب حسب</span>
+    </div>
+
+    <mat-radio-group class="example-radio-group">
+      <mat-radio-button value="1">أعلى التقييمات</mat-radio-button>
+      <mat-radio-button value="2">الأحدث</mat-radio-button>
+    </mat-radio-group>
+
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      <span class="title">الناشر</span>
+    </div>
+
+    <mat-radio-group class="example-radio-group mb-0">
+      <mat-radio-button value="1">أنا</mat-radio-button>
+      <mat-radio-button value="2">اي احد </mat-radio-button>
+    </mat-radio-group>
+    <div class="someone_button">من شخص محدد </div>
+
+    <div class="mt-3" fxLayout="row" fxLayoutAlign="start center">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      <span class="title">التاربخ</span>
+    </div>
+
+    <mat-radio-group class="example-radio-group mb-0">
+      <mat-radio-button value="1">2020</mat-radio-button>
+      <mat-radio-button value="2">2019 </mat-radio-button>
+    </mat-radio-group>
+    <div class="someone_button">تاريج محدد </div>
+
+  </div>
+
+</div>

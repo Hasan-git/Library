@@ -1,0 +1,86 @@
+.tab-g {
+  background-color: #fff;
+}
+
+.form-group.label-static label.control-label,
+.form-group.label-placeholder label.control-label,
+.form-group.label-floating label.control-label {
+  position: unset;
+  margin-bottom: 0px;
+  margin-right: 6px;
+}
+
+.filter {
+  input {
+    height: 26px;
+    padding: 5px !important;
+  }
+}
+
+.splitter {
+  display: flex;
+  align-items: center;
+  background-color: #7c5ac2;
+  box-shadow: 1px 1px 1px #412776;
+  mat-icon {
+    color: #fff;
+    height: 30px;
+    width: 27px;
+    font-size: 34px;
+  }
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.birthday-author-name {
+  margin-right: 15px;
+}
+
+.author-name {
+  // margin-bottom: 5px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.location-icon {
+  font-size: 17px;
+  height: 15px;
+  width: 20px;
+  max-height: 15px;
+  color: #bebebedd;
+}
+
+.birthday-item .birthday-date {
+  font-size: 13px;
+}
+
+.birthday-item {
+  margin-bottom: 4px;
+  margin-right: 6px;
+  padding: 25px 10px;
+  border: 1px solid #dddddd54;
+  box-shadow: 1px 1px 1px #ddd;
+  margin-left: 17px;
+  box-shadow: 1px 1px 1px #3f425740;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.divier {
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.arrow {
+  float: left;
+  vertical-align: 1px;
+  margin-left: 0;
+  margin-right: auto;
+}

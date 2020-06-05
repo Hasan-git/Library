@@ -1,0 +1,184 @@
+<div class="row">
+
+    <!-- WEEKLY -->
+    <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+      <div class="ui-block rtl-fixes">
+        <div class="ui-block-title">
+          <h6 class="title">الأحداث / هذا الاسبوع</h6>
+        </div>
+        <div class="ui-block-content" fxLayout="row" fxLayoutAlign="center center" style="height: 140px;">
+          <strong style="font-size:50px">18</strong>
+        </div>
+      </div>
+    </div>
+    <!-- / WEEKLY -->
+
+  <!-- MONTHLY -->
+  <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div class="ui-block rtl-fixes">
+      <div class="ui-block-title">
+        <h6 class="title">الأحداث / الشهر</h6>
+      </div>
+      <div class="ui-block-content" fxLayout="row" fxLayoutAlign="center center" style="height: 140px;">
+        <strong style="font-size:50px">36</strong>
+      </div>
+    </div>
+  </div>
+  <!-- / MONTHLY -->
+
+  <!-- MONTHLY -->
+  <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div class="ui-block rtl-fixes">
+      <div class="ui-block-title">
+        <h6 class="title">الأحداث / الشهر</h6>
+      </div>
+      <div class="ui-block-content" fxLayout="row" fxLayoutAlign="center center" style="padding-bottom: 0;height: 140px;">
+        <rg-gauge-chart
+          [canvasWidth]="canvasWidth"
+          [needleValue]="needleValue"
+          [centralLabel]="centralLabel"
+          [options]="options"
+          ></rg-gauge-chart>
+      </div>
+    </div>
+  </div>
+  <!-- / MONTHLY -->
+
+
+</div>
+
+<div class="ui-block">
+  <div class="ui-block-title">
+    <h6 class="title">الغرف المتاحة</h6>
+  </div>
+
+  <!-- Slider Weather -->
+
+  <div class="swiper-container pagination-bottom" data-slide="fade">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide-weather" data-swiper-parallax="-500">
+
+        <div class="day-wethear-item" data-mh="wethear-item">
+          <div class="title">غرفة 301</div>
+          <i class="fa fa-user-friends olymp-weather-wind-icon-header icon"></i>
+          <div class="wethear-now">
+            <div fxLayout="column" class="options">
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-tv available"></i>
+                <i class="fa fa-wifi mr-3 available"></i>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-microphone available"></i>
+                <i class="fa fa-volume-up mr-3 "></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-wethear-item" data-mh="wethear-item">
+          <div class="title">غرفة 302</div>
+          <i class="fa fa-user-friends olymp-weather-wind-icon-header icon"></i>
+          <div class="wethear-now">
+            <div fxLayout="column" class="options">
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-tv available"></i>
+                <i class="fa fa-wifi mr-3 available"></i>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-microphone "></i>
+                <i class="fa fa-volume-up mr-3 "></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-wethear-item" data-mh="wethear-item">
+          <div class="title">غرفة 304</div>
+          <i class="fa fa-user-friends olymp-weather-wind-icon-header icon"></i>
+          <div class="wethear-now">
+            <div fxLayout="column" class="options">
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-tv available"></i>
+                <i class="fa fa-wifi mr-3 "></i>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-microphone "></i>
+                <i class="fa fa-volume-up mr-3 "></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-wethear-item" data-mh="wethear-item">
+          <div class="title">غرفة 308</div>
+          <i class="fa fa-user-friends olymp-weather-wind-icon-header icon"></i>
+          <div class="wethear-now">
+            <div fxLayout="column" class="options">
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-tv available"></i>
+                <i class="fa fa-wifi mr-3 "></i>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-microphone "></i>
+                <i class="fa fa-volume-up mr-3 "></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-wethear-item" data-mh="wethear-item">
+          <div class="title">قاعة 403</div>
+          <i class="fa fa-users olymp-weather-wind-icon-header icon"></i>
+          <div class="wethear-now">
+            <div fxLayout="column" class="options">
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-tv available"></i>
+                <i class="fa fa-wifi mr-3 available"></i>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-microphone available"></i>
+                <i class="fa fa-volume-up mr-3 available"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-wethear-item" data-mh="wethear-item">
+          <div class="title">قاعة 406</div>
+          <i class="fa fa-users olymp-weather-wind-icon-header icon"></i>
+          <div class="wethear-now">
+            <div fxLayout="column" class="options">
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-tv available"></i>
+                <i class="fa fa-wifi mr-3 available"></i>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center start">
+                <i class="fa fa-microphone available"></i>
+                <i class="fa fa-volume-up mr-3 available"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination pagination-blue"></div>
+  </div>
+
+  <!-- ... end Slider Weather -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

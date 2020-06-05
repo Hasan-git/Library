@@ -1,0 +1,28 @@
+<div class="container p-0">
+  <div class="row">
+
+    <!-- CONTENT -->
+    <div class="col col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes" fxLayout="row">
+
+        <app-item-group [item]="item" *ngFor="let item of groups;" class="col col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" >
+
+        </app-item-group>
+
+      </div>
+    </div>
+
+    <!-- / CONTENT -->
+
+
+    <!-- MENU -->
+    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+
+      <app-list-menu></app-list-menu>
+
+    </div>
+    <!-- / MENU -->
+
+  </div>
+</div>

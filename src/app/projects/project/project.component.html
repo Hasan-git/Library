@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes breadcrumb">
+        <strong>
+          المشاريع
+        </strong>
+        /
+        <span>
+          نظام إدارة المستشفيات
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <!-- CONTENT -->
+    <div class="col col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes ">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <!-- / CONTENT -->
+
+
+    <!-- MENU -->
+    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes ui-block-content">
+
+        <!-- ITEM -->
+        <div fxLayout="column">
+
+          <div class="nav-item" [routerLink]="['/projects','1','details']" [routerLinkActive]="['active']">
+            <i class="fa fa-desktop ml-3"></i> تفاصيل
+          </div>
+
+          <div class="nav-item" [routerLink]="['/projects','1','issues']" [routerLinkActive]="['active']">
+            <i class="fa fa-comments ml-3"></i>
+            نقاشات
+          </div>
+
+          <div class="nav-item" [routerLink]="['/projects','1','knowledge']" [routerLinkActive]="['active']">
+            <i class="fa fa-database ml-3"></i>
+            قاعدة المعارف
+          </div>
+
+          <div class="nav-item" [routerLink]="['/projects','1','summary']" [routerLinkActive]="['active']">
+            <i class="fa fa-info ml-3"></i>
+            النتائج المستخلصة
+          </div>
+          <div class="nav-item" [routerLink]="['/projects','1','reports']" [routerLinkActive]="['active']">
+            <i class="fa fa-chart-line ml-3"></i>
+            تقرير
+          </div>
+        </div>
+        <!-- ITEM -->
+
+
+      </div>
+    </div>
+    <!-- / MENU -->
+
+  </div>
+</div>

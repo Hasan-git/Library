@@ -1,0 +1,27 @@
+.js-zoom-gallery-fixed li {
+  width: 75px;
+}
+
+.image-container {
+    padding: 20px 77px 20px 20px;
+  }
+  
+  .add-options-message {
+    border-top: 1px solid #e3e3e3;
+  }
+  
+  .upload-item {
+    border: 1px solid #ddd;
+    width: 71px;
+    height: 71px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  
+    .fa-camera {
+      margin: 0;
+      position: unset;
+    }
+  }

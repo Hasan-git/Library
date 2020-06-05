@@ -1,0 +1,177 @@
+<!-- Post -->
+<article class="hentry post">
+
+  <div class="post__author author vcard inline-items">
+    <img [src]="mediaBaseUrl +'/'+ post?.user?.imageSrc" alt="author">
+
+    <!-- NAME AND DATE -->
+    <div class="author-date">
+      <a class="h6 post__author-name fn" href="02-ProfilePage.html">{{post?.user?.name}}</a>
+      <div class="post__date">
+        <time class="published" datetime="2017-03-24T18:18">
+          منذ 10 دقائق
+        </time>
+      </div>
+    </div>
+    <!-- NAME AND DATE -->
+
+    <div class="more">
+      <svg class="olymp-three-dots-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+      </svg>
+      <ul class="more-dropdown">
+        <li>
+          <a href="javascript:void(0)">Edit Post</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">Delete Post</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">Turn Off Notifications</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">Select as Featured</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p>
+    {{post.content}}
+  </p>
+
+  <div class="post-additional-info inline-items">
+
+    <a href="javascript:void(0)" class="post-add-icon inline-items">
+      <svg class="olymp-heart-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-heart-icon"></use>
+      </svg>
+      <span>{{post.likesCount}}</span>
+    </a>
+
+    <ul class="friends-harmonic">
+      <li *ngFor="let comment of post.comments">
+
+        <a href="javascript:void(0)">
+          <img [src]="mediaBaseUrl+'/'+ comment.user.imageSrc" alt="friend">
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="names-people-likes" *ngIf="post && post?.comments.length">
+      <a href="javascript:void(0)">{{post.comments[0].user?.name}}</a>
+      <br>{{post.likesCount-1}} و أشخاص اعجبهم
+    </div>
+
+
+    <div class="comments-shared">
+      <a href="javascript:void(0)" class="post-add-icon inline-items">
+        <svg class="olymp-speech-balloon-icon">
+          <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-speech-balloon-icon"></use>
+        </svg>
+        <span>{{post.commentsCount}}</span>
+      </a>
+
+      <a href="javascript:void(0)" class="post-add-icon inline-items">
+        <svg class="olymp-share-icon">
+          <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-share-icon"></use>
+        </svg>
+        <span>{{post.shareCount}}</span>
+      </a>
+    </div>
+
+
+  </div>
+
+  <!-- SIDE BUTTON ACTIONS -->
+  <div class="control-block-button post-control-button">
+
+    <a href="javascript:void(0)" class="btn btn-control">
+      <svg class="olymp-like-post-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-like-post-icon"></use>
+      </svg>
+    </a>
+
+    <a href="javascript:void(0)" class="btn btn-control">
+      <svg class="olymp-comments-post-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-comments-post-icon"></use>
+      </svg>
+    </a>
+
+    <a href="javascript:void(0)" class="btn btn-control">
+      <svg class="olymp-share-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-share-icon"></use>
+      </svg>
+    </a>
+
+  </div>
+  <!-- / SIDE BUTTON ACTIONS -->
+
+</article>
+<!-- / POST -->
+
+<!-- COMMENTS -->
+<ul class="comments-list">
+
+  <li class="comment-item" *ngFor="let comment of post.comments">
+    <div class="post__author author vcard inline-items">
+      <!-- src="{{mediaBaseUrl}}/{{comment.user.imagesrc}}"  -->
+      <img alt="author" [src]="mediaBaseUrl +'/'+ comment.user.imageSrc">
+      <div class="author-date">
+        <a class="h6 post__author-name fn" href="javascript:void(0)">{{comment.user.name}}</a>
+        <div class="post__date">
+          <time class="published" datetime="2017-03-24T18:18">
+            منذ 5 دقائق
+          </time>
+        </div>
+      </div>
+
+      <a href="javascript:void(0)" class="more">
+        <svg class="olymp-three-dots-icon">
+          <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+        </svg>
+      </a>
+
+    </div>
+
+    <p>{{comment.content}}</p>
+
+    <a href="javascript:void(0)" class="post-add-icon inline-items">
+      <svg class="olymp-heart-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-heart-icon"></use>
+      </svg>
+      <span>{{comment.likesCount}}</span>
+    </a>
+    <a href="javascript:void(0)" class="reply">Reply</a>
+  </li>
+</ul>
+<!-- / COMMENTS -->
+
+<!-- <a href="javascript:void(0)" class="more-comments">View more comments <span>+</span></a> -->
+
+<!-- Comment Form  -->
+<form class="comment-form inline-items">
+
+  <div class="post__author author vcard inline-items">
+    <img src="{{imagesBaseUrl}}author-page.jpg" alt="author">
+
+    <div class="form-group with-icon-right ">
+      <textarea class="form-control" placeholder=""></textarea>
+      <div class="add-options-message">
+        <a href="javascript:void(0)" class="options-message" data-toggle="modal" data-target="#update-header-photo">
+          <svg class="olymp-camera-icon">
+            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-camera-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-md-2 btn-primary">اضف تعليق</button>
+
+  <!-- <button class="btn btn-md-2 btn-border-think c-grey btn-transparent custom-color">Cancel</button> -->
+
+</form>
+<!-- / Comment Form  -->

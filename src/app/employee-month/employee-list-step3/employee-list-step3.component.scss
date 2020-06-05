@@ -1,0 +1,16 @@
+
+.birthday-item .btn {
+  float: left;
+}
+
+.birthday-item .author-thumb {
+  float: right;
+  margin-right: unset;
+  margin-left: 8px;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+  padding: .5rem 1rem;
+  font-size: 0.86rem;
+  max-width: 40%;
+}

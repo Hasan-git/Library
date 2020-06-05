@@ -1,0 +1,984 @@
+<body class="page-has-left-panels page-has-right-panels dir-rtl">
+
+  <!-- / PRELOAD -->
+  <app-preload></app-preload>
+  <!-- / PRELOAD -->
+
+  <!-- HEADER -->
+  <app-header></app-header>
+  <!-- / HEADER -->
+
+
+  <!-- HEADER RESPONSIVE -->
+  <app-header></app-header>
+  <!-- / HEADER RESPONSIVE -->
+
+  <!-- CHAT FIXED -->
+  <app-chat-fixed-right></app-chat-fixed-right>
+  <!-- / CHAT FIXED -->
+
+  <!-- NAVIGATION SIDEBAR RIGHT -->
+  <app-navigation-sidebar-right></app-navigation-sidebar-right>
+  <!-- / NAVIGATION SIDEBAR RIGHT -->
+
+
+  <div class="header-spacer"></div>
+
+  <!-- CONTENT -->
+  <router-outlet></router-outlet>
+  <!-- / CONTENT -->
+
+  <!-- Window-popup Update Header Photo -->
+
+  <div class="modal fade" id="update-header-photo" tabindex="-1" role="dialog" aria-labelledby="update-header-photo" aria-hidden="true">
+    <div class="modal-dialog window-popup update-header-photo" role="document">
+      <div class="modal-content">
+        <a href="javascript:void(0)" class="close icon-close" data-dismiss="modal" aria-label="Close">
+          <svg class="olymp-close-icon">
+            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+          </svg>
+        </a>
+
+        <div class="modal-header">
+          <h6 class="title">Update Header Photo</h6>
+        </div>
+
+        <div class="modal-body">
+          <a href="javascript:void(0)" class="upload-photo-item">
+            <svg class="olymp-computer-icon">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-computer-icon"></use>
+            </svg>
+
+            <h6>Upload Photo</h6>
+            <span>Browse your computer.</span>
+          </a>
+
+          <a href="javascript:void(0)" class="upload-photo-item" data-toggle="modal" data-target="#choose-from-my-photo">
+
+            <svg class="olymp-photos-icon">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-photos-icon"></use>
+            </svg>
+
+            <h6>Choose from My Photos</h6>
+            <span>Choose from your uploaded photos</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- / Window-popup Update Header Photo -->
+
+  <!-- Window-popup Choose from my Photo -->
+
+  <div class="modal fade" id="choose-from-my-photo" tabindex="-1" role="dialog" aria-labelledby="choose-from-my-photo" aria-hidden="true">
+    <div class="modal-dialog window-popup choose-from-my-photo" role="document">
+
+      <div class="modal-content">
+        <a href="javascript:void(0)" class="close icon-close" data-dismiss="modal" aria-label="Close">
+          <svg class="olymp-close-icon">
+            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+          </svg>
+        </a>
+        <div class="modal-header">
+          <h6 class="title">Choose from My Photos</h6>
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-expanded="true">
+                <svg class="olymp-photos-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-photos-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-expanded="false">
+                <svg class="olymp-albums-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-albums-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="modal-body">
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-expanded="true">
+
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo1.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo2.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo3.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo4.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo5.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo6.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo7.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo8.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <div class="radio">
+                  <label class="custom-radio">
+                    <img src="{{imagesBaseUrl}}choose-photo9.jpg" alt="photo">
+                    <input type="radio" name="optionsRadios">
+                  </label>
+                </div>
+              </div>
+
+
+              <a href="javascript:void(0)" class="btn btn-secondary btn-lg btn--half-width">Cancel</a>
+              <a href="javascript:void(0)" class="btn btn-primary btn-lg btn--half-width">Confirm Photo</a>
+
+            </div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-expanded="false">
+
+              <div class="choose-photo-item" data-mh="choose-item">
+                <figure>
+                  <img src="{{imagesBaseUrl}}choose-photo10.jpg" alt="photo">
+                  <figcaption>
+                    <a href="javascript:void(0)">South America Vacations</a>
+                    <span>Last Added: 2 hours ago</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <figure>
+                  <img src="{{imagesBaseUrl}}choose-photo11.jpg" alt="photo">
+                  <figcaption>
+                    <a href="javascript:void(0)">Photoshoot Summer 2016</a>
+                    <span>Last Added: 5 weeks ago</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <figure>
+                  <img src="{{imagesBaseUrl}}choose-photo12.jpg" alt="photo">
+                  <figcaption>
+                    <a href="javascript:void(0)">Amazing Street Food</a>
+                    <span>Last Added: 6 mins ago</span>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="choose-photo-item" data-mh="choose-item">
+                <figure>
+                  <img src="{{imagesBaseUrl}}choose-photo13.jpg" alt="photo">
+                  <figcaption>
+                    <a href="javascript:void(0)">Graffity & Street Art</a>
+                    <span>Last Added: 16 hours ago</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <figure>
+                  <img src="{{imagesBaseUrl}}choose-photo14.jpg" alt="photo">
+                  <figcaption>
+                    <a href="javascript:void(0)">Amazing Landscapes</a>
+                    <span>Last Added: 13 mins ago</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="choose-photo-item" data-mh="choose-item">
+                <figure>
+                  <img src="{{imagesBaseUrl}}choose-photo15.jpg" alt="photo">
+                  <figcaption>
+                    <a href="javascript:void(0)">The Majestic Canyon</a>
+                    <span>Last Added: 57 mins ago</span>
+                  </figcaption>
+                </figure>
+              </div>
+
+
+              <a href="javascript:void(0)" class="btn btn-secondary btn-lg btn--half-width">Cancel</a>
+              <a href="javascript:void(0)" class="btn btn-primary btn-lg disabled btn--half-width">Confirm Photo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- / Window-popup Choose from my Photo -->
+
+  <!-- Playlist Popup -->
+
+  <div class="window-popup playlist-popup" tabindex="-1" role="dialog" aria-labelledby="playlist-popup" aria-hidden="true">
+
+    <a href="" class="icon-close js-close-popup">
+      <svg class="olymp-close-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+      </svg>
+    </a>
+
+    <div class="mCustomScrollbar">
+      <table class="playlist-popup-table">
+
+        <thead>
+
+          <tr>
+
+            <th class="play">
+              PLAY
+            </th>
+
+            <th class="cover">
+              COVER
+            </th>
+
+            <th class="song-artist">
+              SONG AND ARTIST
+            </th>
+
+            <th class="album">
+              ALBUM
+            </th>
+
+            <th class="released">
+              RELEASED
+            </th>
+
+            <th class="duration">
+              DURATION
+            </th>
+
+            <th class="spotify">
+              GET IT ON SPOTIFY
+            </th>
+
+            <th class="remove">
+              REMOVE
+            </th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="play">
+              <a href="javascript:void(0)" class="play-icon">
+                <svg class="olymp-music-play-icon-big">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons-music.svg#olymp-music-play-icon-big"></use>
+                </svg>
+              </a>
+            </td>
+            <td class="cover">
+              <div class="playlist-thumb">
+                <img src="{{imagesBaseUrl}}playlist19.jpg" alt="thumb-composition">
+              </div>
+            </td>
+            <td class="song-artist">
+              <div class="composition">
+                <a href="javascript:void(0)" class="composition-name">We Can Be Heroes</a>
+                <a href="javascript:void(0)" class="composition-author">Jason Bowie</a>
+              </div>
+            </td>
+            <td class="album">
+              <a href="javascript:void(0)" class="album-composition">Ziggy Firedust</a>
+            </td>
+            <td class="released">
+              <div class="release-year">2014</div>
+            </td>
+            <td class="duration">
+              <div class="composition-time">
+                <time class="published" datetime="2017-03-24T18:18">6:17</time>
+              </div>
+            </td>
+            <td class="spotify">
+              <i class="fab fa-spotify composition-icon" aria-hidden="true"></i>
+            </td>
+            <td class="remove">
+              <a href="javascript:void(0)" class="remove-icon">
+                <svg class="olymp-close-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                </svg>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="play">
+              <a href="javascript:void(0)" class="play-icon">
+                <svg class="olymp-music-play-icon-big">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons-music.svg#olymp-music-play-icon-big"></use>
+                </svg>
+              </a>
+            </td>
+            <td class="cover">
+              <div class="playlist-thumb">
+                <img src="{{imagesBaseUrl}}playlist6.jpg" alt="thumb-composition">
+              </div>
+            </td>
+            <td class="song-artist">
+              <div class="composition">
+                <a href="javascript:void(0)" class="composition-name">The Past Starts Slow and Ends</a>
+                <a href="javascript:void(0)" class="composition-author">System of a Revenge</a>
+              </div>
+            </td>
+            <td class="album">
+              <a href="javascript:void(0)" class="album-composition">Wonderize</a>
+            </td>
+            <td class="released">
+              <div class="release-year">2014</div>
+            </td>
+            <td class="duration">
+              <div class="composition-time">
+                <time class="published" datetime="2017-03-24T18:18">6:17</time>
+              </div>
+            </td>
+            <td class="spotify">
+              <i class="fab fa-spotify composition-icon" aria-hidden="true"></i>
+            </td>
+            <td class="remove">
+              <a href="javascript:void(0)" class="remove-icon">
+                <svg class="olymp-close-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                </svg>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="play">
+              <a href="javascript:void(0)" class="play-icon">
+                <svg class="olymp-music-play-icon-big">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons-music.svg#olymp-music-play-icon-big"></use>
+                </svg>
+              </a>
+            </td>
+            <td class="cover">
+              <div class="playlist-thumb">
+                <img src="{{imagesBaseUrl}}playlist7.jpg" alt="thumb-composition">
+              </div>
+            </td>
+            <td class="song-artist">
+              <div class="composition">
+                <a href="javascript:void(0)" class="composition-name">The Pretender</a>
+                <a href="javascript:void(0)" class="composition-author">Kung Fighters</a>
+              </div>
+            </td>
+            <td class="album">
+              <a href="javascript:void(0)" class="album-composition">Warping Lights</a>
+            </td>
+            <td class="released">
+              <div class="release-year">2014</div>
+            </td>
+            <td class="duration">
+              <div class="composition-time">
+                <time class="published" datetime="2017-03-24T18:18">6:17</time>
+              </div>
+            </td>
+            <td class="spotify">
+              <i class="fab fa-spotify composition-icon" aria-hidden="true"></i>
+            </td>
+            <td class="remove">
+              <a href="javascript:void(0)" class="remove-icon">
+                <svg class="olymp-close-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                </svg>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="play">
+              <a href="javascript:void(0)" class="play-icon">
+                <svg class="olymp-music-play-icon-big">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons-music.svg#olymp-music-play-icon-big"></use>
+                </svg>
+              </a>
+            </td>
+            <td class="cover">
+              <div class="playlist-thumb">
+                <img src="{{imagesBaseUrl}}playlist8.jpg" alt="thumb-composition">
+              </div>
+            </td>
+            <td class="song-artist">
+              <div class="composition">
+                <a href="javascript:void(0)" class="composition-name">Seven Nation Army</a>
+                <a href="javascript:void(0)" class="composition-author">The Black Stripes</a>
+              </div>
+            </td>
+            <td class="album">
+              <a href="javascript:void(0)" class="album-composition ">Icky Strung (LIVE at Cube Garden)</a>
+            </td>
+            <td class="released">
+              <div class="release-year">2014</div>
+            </td>
+            <td class="duration">
+              <div class="composition-time">
+                <time class="published" datetime="2017-03-24T18:18">6:17</time>
+              </div>
+            </td>
+            <td class="spotify">
+              <i class="fab fa-spotify composition-icon" aria-hidden="true"></i>
+            </td>
+            <td class="remove">
+              <a href="javascript:void(0)" class="remove-icon">
+                <svg class="olymp-close-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                </svg>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="play">
+              <a href="javascript:void(0)" class="play-icon">
+                <svg class="olymp-music-play-icon-big">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons-music.svg#olymp-music-play-icon-big"></use>
+                </svg>
+              </a>
+            </td>
+            <td class="cover">
+              <div class="playlist-thumb">
+                <img src="{{imagesBaseUrl}}playlist9.jpg" alt="thumb-composition">
+              </div>
+            </td>
+            <td class="song-artist">
+              <div class="composition">
+                <a href="javascript:void(0)" class="composition-name">Leap of Faith</a>
+                <a href="javascript:void(0)" class="composition-author">Eden Artifact</a>
+              </div>
+            </td>
+            <td class="album">
+              <a href="javascript:void(0)" class="album-composition">The Assassins’s Soundtrack</a>
+            </td>
+            <td class="released">
+              <div class="release-year">2014</div>
+            </td>
+            <td class="duration">
+              <div class="composition-time">
+                <time class="published" datetime="2017-03-24T18:18">6:17</time>
+              </div>
+            </td>
+            <td class="spotify">
+              <i class="fab fa-spotify composition-icon" aria-hidden="true"></i>
+            </td>
+            <td class="remove">
+              <a href="javascript:void(0)" class="remove-icon">
+                <svg class="olymp-close-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                </svg>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="play">
+              <a href="javascript:void(0)" class="play-icon">
+                <svg class="olymp-music-play-icon-big">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons-music.svg#olymp-music-play-icon-big"></use>
+                </svg>
+              </a>
+            </td>
+            <td class="cover">
+              <div class="playlist-thumb">
+                <img src="{{imagesBaseUrl}}playlist10.jpg" alt="thumb-composition">
+              </div>
+            </td>
+            <td class="song-artist">
+              <div class="composition">
+                <a href="javascript:void(0)" class="composition-name">Killer Queen</a>
+                <a href="javascript:void(0)" class="composition-author">Archiduke</a>
+              </div>
+            </td>
+            <td class="album">
+              <a href="javascript:void(0)" class="album-composition ">News of the Universe</a>
+            </td>
+            <td class="released">
+              <div class="release-year">2014</div>
+            </td>
+            <td class="duration">
+              <div class="composition-time">
+                <time class="published" datetime="2017-03-24T18:18">6:17</time>
+              </div>
+            </td>
+            <td class="spotify">
+              <i class="fab fa-spotify composition-icon" aria-hidden="true"></i>
+            </td>
+            <td class="remove">
+              <a href="javascript:void(0)" class="remove-icon">
+                <svg class="olymp-close-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                </svg>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <audio id="mediaplayer" data-showplaylist="true">
+      <!-- <source src="mp3/Twice.mp3" title="Track 1" data-poster="track1.png" type="audio/mpeg">
+      <source src="mp3/Twice.mp3" title="Track 2" data-poster="track2.png" type="audio/mpeg">
+      <source src="mp3/Twice.mp3" title="Track 3" data-poster="track3.png" type="audio/mpeg">
+      <source src="mp3/Twice.mp3" title="Track 4" data-poster="track4.png" type="audio/mpeg"> -->
+    </audio>
+
+  </div>
+
+  <!-- / Playlist Popup -->
+
+
+  <a class="back-to-top" href="javascript:void(0)">
+    <img src="assets/web/svg-icons/back-to-top.svg" alt="arrow" class="back-icon">
+  </a>
+
+  <!-- Window-popup-CHAT for responsive min-width: 768px -->
+
+  <div class="ui-block popup-chat popup-chat-responsive" tabindex="-1" role="dialog" aria-labelledby="popup-chat-responsive" aria-hidden="true">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="icon-status online"></span>
+        <h6 class="title">دردشة</h6>
+        <div class="more">
+          <svg class="olymp-three-dots-icon">
+            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+          </svg>
+          <svg class="olymp-little-delete js-chat-open">
+            <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-little-delete"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="mCustomScrollbar">
+          <ul class="notification-list chat-message chat-message-field">
+            <li>
+              <div class="author-thumb">
+                <img src="{{imagesBaseUrl}}avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+              </div>
+              <div class="notification-event">
+                <span class="chat-message-item">مرحبا يا جيمس!! يرجى تذكر أن تشتري الطعام ليوم غد! سوف أتعامل مع الهدايا وسيحصل جيك على المشروبات</span>
+                <span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time></span>
+              </div>
+            </li>
+
+            <li>
+              <div class="author-thumb">
+                <img src="{{imagesBaseUrl}}author-page.jpg" alt="author" class="mCS_img_loaded">
+              </div>
+              <div class="notification-event">
+                <span class="chat-message-item">لا تقلق من ماتيلدا!</span>
+                <span class="chat-message-item">لقد اشتريت بالفعل كل شيء</span>
+                <span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">أمس الساعة 8:10 مساءً</time></span>
+              </div>
+            </li>
+
+            <li>
+              <div class="author-thumb">
+                <img src="{{imagesBaseUrl}}avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+              </div>
+              <div class="notification-event">
+                <span class="chat-message-item">مرحبا يا جيمس!! يرجى تذكر أن تشتري الطعام ليوم غد! سوف أتعامل مع الهدايا وسيحصل جيك على المشروبات</span>
+                <span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">أمس الساعة 8:10 مساءً</time></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="need-validation">
+
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Enter للنشر اضغط على"></textarea>
+            <div class="add-options-message">
+              <a href="javascript:void(0)" class="options-message">
+                <svg class="olymp-computer-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-computer-icon"></use>
+                </svg>
+              </a>
+              <div class="options-message smile-block">
+
+                <svg class="olymp-happy-sticker-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-happy-sticker-icon"></use>
+                </svg>
+
+                <ul class="more-dropdown more-with-triangle triangle-bottom-right">
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat1.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat2.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat3.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat4.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat5.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat6.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat7.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat8.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat9.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat10.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat11.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat12.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat13.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat14.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat15.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat16.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat17.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat18.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat19.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat20.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat21.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat22.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat23.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat24.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat25.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat26.png" alt="icon">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <img src="{{imagesBaseUrl}}icon-chat27.png" alt="icon">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <a style="visibility: hidden;" id="open" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#popup-write-rewiev" href="javascript:void(0)" class="btn btn-breez btn-sm">Open Popup</a>
+  <a style="visibility: hidden;" id="open-public" data-toggle="modal" data-target="#public-event" href="javascript:void(0)" class="btn btn-breez btn-sm">Open Popup</a>
+
+
+
+  <!-- Popup Write Rewiev -->
+
+  <div class="modal fade" id="popup-write-rewiev" tabindex="-1" role="dialog" aria-labelledby="popup-write-rewiev" aria-hidden="true">
+    <div class="modal-dialog window-popup popup-write-rewiev" role="document">
+      <div class="modal-content">
+        <a href="javascript:void(0)" class="close icon-close" data-dismiss="modal" aria-label="Close">
+          <svg class="olymp-close-icon">
+            <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+          </svg>
+        </a>
+
+        <div class="modal-header">
+          <h6 class="title">تحديث الملف الشخصي</h6>
+        </div>
+
+        <div class="modal-body">
+          <form class="form-write-rewiev">
+            <div class="row">
+              <div class="col col-xl-6 col-lg-6 col-md-6">
+                <div class="form-group label-floating">
+                  <label class="control-label">الاسم الاول</label>
+                  <input class="form-control" placeholder="" type="text" value="داني">
+                </div>
+              </div>
+              <div class="col col-xl-6 col-lg-6 col-md-6">
+                <div class="form-group label-floating">
+                  <label class="control-label">الكنية</label>
+                  <input class="form-control" placeholder="" type="text" value="كريم">
+                </div>
+              </div>
+              <div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group label-floating">
+                  <label class="control-label">البريد الإلكتروني</label>
+                  <input class="form-control" placeholder="" type="email" value="dani.shreif@yourmail.com">
+                </div>
+
+                <div class="form-group label-floating">
+                  <label class="control-label">رقم الهاتف</label>
+                  <input class="form-control" placeholder="" type="text" value="+961 3 060269">
+                </div>
+
+                <div class="form-group">
+                  <textarea class="form-control" style="text-align: right;" placeholder="السيرة الذاتية">فرد بارع لديه خلفية قوية في التسويق والبيع. رغبة شديدة في تعلم كيفية تحسين جوهر الشبكات </textarea>
+                </div>
+
+                <div data-toggle="modal" data-target="#popup-write-rewiev" class="btn btn-primary btn-lg full-width">حفظ</div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ... end Popup Write Rewiev -->
+
+
+  <!-- Window-popup Event Public -->
+
+  <div class="modal fade" id="public-event" tabindex="-1" role="dialog" aria-labelledby="public-event" aria-hidden="true">
+    <div class="modal-dialog window-popup event-private-public public-event" role="document">
+      <div class="modal-content">
+        <a href="javascript:void(0)" class="close icon-close" data-dismiss="modal" aria-label="Close">
+          <svg class="olymp-close-icon">
+            <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+          </svg>
+        </a>
+        <div class="modal-body">
+          <article class="hentry post has-post-thumbnail thumb-full-width private-event">
+
+            <div class="private-event-head inline-items" style="direction: rtl;text-align: right;">
+              <img src="assets/web/img/badge9.png" alt="author" style="margin-left: 15px;">
+
+              <div class="author-date">
+                <a class="h3 event-title" href="javascript:void(0)">رسالة ترحيب</a>
+                <div class="event__date">
+                </div>
+              </div>
+
+              <!-- <div class="more">
+                <svg class="olymp-three-dots-icon">
+                  <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+                </svg>
+                <ul class="more-dropdown">
+                  <li>
+                    <a href="javascript:void(0)">Edit Event Settings</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Mark as Completed</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Delete Event</a>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+
+            <div class="post-thumb">
+              <img src="assets/web/img/welcome.jpg" alt="photo">
+            </div>
+
+            <div class="row">
+              <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="post__author author vcard inline-items">
+                  <img src="assets/web/img/avatar4-sm.jpg" alt="author">
+
+                  <div class="author-date">
+                    <a class="h6 post__author-name fn" href="javascript:void(0)">قسم التنمية البشرية</a> أنشأ
+                    <a href="javascript:void(0)">الحدث</a>
+                    <div class="post__date">
+                      <time class="published" datetime="2017-03-24T18:18">
+                        9:52 صباحا
+                      </time>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-right welcome-message">
+                  نود أن نرحب بك في بنك الأهلي المصري ومع تمنياتنا لك بدوام التوفيق
+                </p>
+              </div>
+              <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="event-description" style="direction: rtl;text-align: right;">
+                  <h6 class="event-description-title">سياسة خاصة</h6>
+
+                  <div class="place inline-items">
+                    <svg class="olymp-add-a-place-icon">
+                      <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-blog-icon"></use>
+                    </svg>
+                    <span>
+                      تخزين البيانات الشخصية طوال فترة العلاقة التعاقدية.
+                    </span>
+                  </div>
+
+                  <div class="place inline-items">
+                    <svg class="olymp-add-a-place-icon">
+                      <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-blog-icon"></use>
+                    </svg>
+                    <span>.الالتزام بجميع الضوابط التي يضعها البنك خلال دوام العمل </span>
+                  </div>
+
+                  <div class="place inline-items">
+                    <svg class="olymp-add-a-place-icon">
+                      <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-blog-icon"></use>
+                    </svg>
+                    <span>لا يتحمل البنك بأي حال من الأحوال ، ولا أي من مسؤوليه ومديريه وموظفيه ، مسؤولية أي شيء ينشأ عن أو يرتبط بأي شكل من الأشكال باستخدامك لهذا الموقع سواء كانت هذه المسؤولية بموجب العقد </span>
+                  </div>
+
+                  <div class="place inline-items">
+                    <svg class="olymp-add-a-place-icon">
+                      <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-blog-icon"></use>
+                    </svg>
+                    <span> لا يتحمل البنك ، بما في ذلك مسؤوليه ومديروه وموظفيه ، المسؤولية عن أي مسؤولية غير مباشرة أو تبعية أو خاصة ناشئة عن أو تتعلق بأي شكل من الأشكال باستخدامك لهذا الموقع.
+                    </span>
+                  </div>
+
+                  <div class="place inline-items">
+                    <svg class="olymp-add-a-place-icon">
+                      <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-blog-icon"></use>
+                    </svg>
+                    <span> يمنع الانخراط في أي استخراج للبيانات أو جمع البيانات أو استخراج البيانات أو أي نشاط آخر مماثل فيما يتعلق بهذا الموقع
+                    </span>
+                  </div>
+
+                  <a href="javascript:void(0)" data-toggle="modal" data-target="#public-event" class="btn btn-blue btn-sm full-width">موافق</a>
+                </div>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ... end Window-popup Event Public -->
+
+</body>

@@ -1,0 +1,33 @@
+.help-support-list li svg {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.help-support-block .title {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.help-support-list li a {
+  font-size: 12px;
+  color: #686c7e;
+}
+
+.total-topic {
+  font-size: 10px;
+  border-radius: 100%;
+  font-weight: 900;
+  width: 22px;
+  height: 22px;
+  background-color: #ebecf2;
+  text-align: center;
+  line-height: 22px;
+  display: block;
+  color: #7c5ac2;
+}
+
+.help-support-block .title .total-topic {
+  margin-left: 0;
+  margin-right: 15px;
+}

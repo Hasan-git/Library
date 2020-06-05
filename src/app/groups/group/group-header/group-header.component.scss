@@ -1,0 +1,15 @@
+.profile-section {
+  position: relative;
+  padding: 15px 0;
+  z-index: 3;
+}
+
+.profile-menu {
+  justify-content: start;
+  .text-green {
+    color: #47c46c;
+  }
+  .btn-sm {
+    cursor: pointer;
+  }
+}

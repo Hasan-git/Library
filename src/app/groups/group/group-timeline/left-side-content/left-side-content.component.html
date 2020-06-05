@@ -1,0 +1,70 @@
+<!-- SUGGESTED FRIENDS -->
+<div class="ui-block suggested-friends">
+  <div class="ui-block-title">
+    <h6 class="title">اقتراحات الأصدقاء</h6>
+    <a href="javascript:void(0)" class="more">
+      <svg class="olymp-three-dots-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+      </svg>
+    </a>
+  </div>
+
+  <ul class="widget w-friend-pages-added notification-list friend-requests">
+
+    <li class="inline-items" *ngFor="let item of suggestedFriends">
+      <div class="author-thumb">
+        <img src="{{imagesBaseUrl}}avatar38-sm.jpg" alt="author">
+      </div>
+      <div class="notification-event">
+        <a href="javascript:void(0)" class="h6 notification-friend">{{item.name}}</a>
+        <span class="chat-message-item">{{item.discription}}</span>
+      </div>
+      <span class="notification-icon">
+        <a href="javascript:void(0)" class="accept-request">
+          <span class="icon-add without-text">
+            <svg class="olymp-happy-face-icon">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use>
+            </svg>
+          </span>
+        </a>
+      </span>
+    </li>
+  </ul>
+
+</div>
+<!-- / SUGGESTED FRIENDS -->
+
+<!-- NEW MEMBERS -->
+<div class="ui-block suggested-friends">
+  <div class="ui-block-title">
+    <h6 class="title">اعضاء جدد</h6>
+    <a href="javascript:void(0)" class="more"><svg class="olymp-three-dots-icon">
+        <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
+      </svg>
+    </a>
+  </div>
+
+  <ul class="widget w-friend-pages-added notification-list friend-requests">
+
+    <li class="inline-items" *ngFor="let item of suggestedFriends">
+      <div class="author-thumb">
+        <img src="{{imagesBaseUrl}}avatar38-sm.jpg" alt="author">
+      </div>
+      <div class="notification-event">
+        <a href="javascript:void(0)" class="h6 notification-friend">{{item.name}}</a>
+        <span class="chat-message-item">{{item.discription}}</span>
+      </div>
+      <!-- <span class="notification-icon">
+        <a href="javascript:void(0)" class="accept-request">
+          <span class="icon-add without-text">
+            <svg class="olymp-happy-face-icon">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use>
+            </svg>
+          </span>
+        </a>
+      </span> -->
+    </li>
+  </ul>
+
+</div>
+<!-- NEW MEMBERS -->

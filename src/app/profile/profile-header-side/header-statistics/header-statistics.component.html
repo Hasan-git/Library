@@ -1,0 +1,130 @@
+<div fxLayout="row " fxLayoutGap="15px">
+
+
+
+  <!-- CAROUSEL -->
+  <app-news-carousel fxFlex="1 0 40%"></app-news-carousel>
+  <!-- CAROUSEL -->
+
+
+  <div fxFlex="1 0 60%">
+    <div fxLayout="column" fxLayoutGap="15px">
+      <div fxLayout="row" fxLayoutGap="15px">
+
+        <!-- COMMENTS -->
+        <div fxFlex="1 0 auto">
+          <div class="widget">
+            <div class="widget-controls">
+              <!-- <span class="refresh-content">
+                <i class="fa fa-sync-alt"></i>
+              </span> -->
+            </div>
+            <div class="mini-stats ">
+              <span class="sky-skin"><i class="fa fa-star"></i></span>
+              <p>
+                <i class="fa fa-arrow-up up mr-2 text-success"></i>
+                النقاط</p>
+              <h3>1,425</h3>
+            </div>
+          </div>
+        </div>
+        <!-- COMMENTS -->
+
+        <!-- VACATIONS -->
+        <div fxFlex="1 0 auto">
+          <div class="widget">
+            <div class="widget-controls">
+              <!-- <span class="refresh-content">
+                <i class="fa fa-sync-alt"></i>
+              </span> -->
+            </div><!-- Widget Controls -->
+            <div class="mini-stats ">
+              <span class="sky-skin"><i class="fa fa-umbrella-beach"></i></span>
+              <p>
+                <!-- <i class="fa fa-arrow-down down mr-2"></i> -->
+                الاجازات </p>
+              <h3>12</h3>
+            </div>
+          </div>
+        </div>
+        <!-- VACATIONS -->
+
+        <!-- BRILIANT -->
+        <div fxFlex="1 0 auto">
+          <div class="widget">
+            <!-- <div class="widget-controls">
+              <span class="refresh-content">
+                <i class="fa fa-sync-alt"></i>
+              </span>
+            </div> -->
+            <!-- Widget Controls -->
+            <div class="mini-stats ">
+              <span class="sky-skin"><i class="fa fa-lightbulb"></i></span>
+              <p>
+                <i class="fa fa-arrow-up up mr-2 text-success"></i>
+                ابداعات </p>
+              <h3>20</h3>
+            </div>
+          </div>
+        </div>
+        <!-- BRILIANT -->
+      </div>
+
+      <!-- PERFORMANCE -->
+      <div fxLayout="row" fxLayoutGap="15px">
+
+        <div class="widget" fxFlex="32%">
+          <div class="mini-stats ">
+
+            <div fxLayout="row">
+              <span class="purple-skin box"><i class="fa fa-chart-line"></i></span>
+              <p class="widget-title">
+                <span class="pr-2 text-success">
+                  <i class="fa fa-arrow-up up "></i>
+                  15%
+                </span>
+                مؤشر الاداء</p>
+
+              <div style="display: block;" class="line-chart">
+                <canvas baseChart width="100" height="70"
+                  [datasets]="statistics.performance.datasets"
+                  [labels]="statistics.performance.labels"
+                  [colors]="statistics.performance.colors"
+                  [options]="statistics.performance.options"
+                  [chartType]="statistics.performance.chartType">
+                </canvas>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="widget m-0" fxFlex="32%">
+          <div class="mini-stats ">
+
+            <div fxLayout="row">
+              <span class="purple-skin box"><i class="fa fa-chart-line"></i></span>
+              <p class="widget-title">
+                <span class="pr-2 text-success">
+                  <i class="fa fa-arrow-up up "></i>
+                  2%
+                </span>المتابعين</p>
+
+              <div style="display: block;" class="line-chart">
+                <canvas baseChart width="100" height="70"
+                  [datasets]="statistics.followers.datasets"
+                  [labels]="statistics.followers.labels"
+                  [colors]="statistics.followers.colors"
+                  [options]="statistics.followers.options"
+                  [chartType]="statistics.followers.chartType">
+                </canvas>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- PERFORMANCE -->
+
+    </div>
+  </div>

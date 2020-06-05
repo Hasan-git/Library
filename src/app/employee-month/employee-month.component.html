@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="rtl-fixes rtl-dir-fixes breadcrumb">
+        <strong>
+          موظف الشهر
+        </strong>
+        /
+        <span>
+          تصويت
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="">
+    <div class="panel-body wizard-content">
+      <form id="example-form" action="#" class="tab-wizard wizard-circle wizard clearfix">
+
+        <!-- BLOCK -->
+        <h6>مدير الفرع</h6>
+        <section>
+          <app-employees-list></app-employees-list>
+        </section>
+        <!-- BLOCK -->
+
+
+        <!-- BLOCK -->
+        <h6>مدير منطقة فرعية</h6>
+        <section>
+          <app-employee-list-step2 *ngIf="true" ></app-employee-list-step2>
+        </section>
+        <!-- BLOCK -->
+
+        <!-- BLOCK -->
+        <h6>المدير العام</h6>
+        <section>
+          <app-employee-list-step3></app-employee-list-step3>
+        </section>
+        <!-- BLOCK -->
+
+
+         <!-- BLOCK -->
+         <h6>التهنئة</h6>
+         <section>
+           <app-employee-list-step4></app-employee-list-step4>
+         </section>
+         <!-- BLOCK -->
+
+      </form>
+    </div>
+  </div>
+</div>
+

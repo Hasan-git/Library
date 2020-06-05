@@ -1,0 +1,140 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes breadcrumb">
+        <strong>
+          طلبات
+        </strong>
+        /
+        <span>
+          طلب مغادرة
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="wizard-v3-content">
+    <div class="wizard-form">
+      <div class="wizard-header">
+        <h3 class="heading" style="color: #326287;">طلب مغادرة </h3>
+        <p>املأ جميع حقول النموذج للانتقال إلى الخطوة التالية</p>
+      </div>
+      <form class="form-register" action="#" method="post">
+        <div id="form-total">
+          <!-- SECTION 1 -->
+          <h2>
+            <span class="step-icon"><i class="fa fa-sign-out-alt"></i></span>
+            <span class="step-text">الطلب</span>
+          </h2>
+          <section>
+            <div class="inner">
+              <h3 style="color:#326287">معلومات الطلب</h3>
+
+              <div class="form-group label-floating is-empty">
+                <label class="control-label">صاحب الطلب</label>
+                <input class="form-control" type="text" placeholder="" id="r1" value="سامي كريم" disabled="true">
+              </div>
+
+              <div class="form-group label-floating is-empty">
+                <label class="control-label">القسم</label>
+                <input class="form-control" type="text" placeholder="" id="r2" value="قسم المبيعات" disabled="true">
+              </div>
+
+              <div class="form-group label-floating is-select">
+                <label class="control-label">سبب طلب المغادرة</label>
+                <select class="selectpicker form-control" id="r3">
+                  <option value="اجازة سنويه" selected>اجازة سنويه</option>
+                  <option value="أجازة مرضية" class="">أجازة مرضية</option>
+                  <option value="اجازة امومة" class="">اجازة امومة</option>
+                  <option value="إجازة غير مدفوعة الأجر" class="">إجازة غير مدفوعة الأجر</option>
+                  <option value="تعويضي" class="">تعويضي</option>
+                  <option value="اخر" class="">اخر</option>
+                </select>
+              </div>
+
+              <div class="form-group label-floating is-empty">
+                <label class="control-label">ملاحظات</label>
+                <textarea class="form-control" type="text" placeholder="" id="r4" value=""></textarea>
+              </div>
+
+              <div class="form-group date-time-picker label-floating">
+                <label class="control-label">من تاريخ </label>
+                <input name="datetimepicker" value="10/24/1984" id="r5" />
+                <span class="input-group-addon">
+                  <svg class="olymp-calendar-icon">
+                    <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                  </svg>
+                </span>
+              </div>
+
+
+              <div class="form-group date-time-picker label-floating">
+                <label class="control-label">الى تاريخ </label>
+                <input name="datetimepicker" value="10/24/1984" id="r6" />
+                <span class="input-group-addon">
+                  <svg class="olymp-calendar-icon">
+                    <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 4 -->
+          <h2>
+            <span class="step-icon"><i class="fa fa-sticky-note"></i></span>
+            <span class="step-text">مراجعة</span>
+          </h2>
+          <section>
+            <div class="inner">
+
+              <h3 style="color:#326287">مراجعة الطلب</h3>
+              <div class="form-row table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr class="space-row">
+                      <th>صاحب الطلب</th>
+                      <td id="td1"></td>
+                    </tr>
+                    <tr class="space-row">
+                      <th>القسم</th>
+                      <td id="td2"></td>
+                    </tr>
+                    <tr class="space-row">
+                      <th>سبب طلب المغادرة</th>
+                      <td id="td3"></td>
+                    </tr>
+                    <tr class="space-row">
+                      <th>ملاحظات</th>
+                      <td id="td4"></td>
+                    </tr>
+                    <tr class="space-row">
+                      <th>من تاريخ</th>
+                      <td id="td5"></td>
+                    </tr>
+                    <tr class="space-row">
+                      <th>الى تاريخ</th>
+                      <td id="td6"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<swal
+  #swal
+  title="تم انشاء الطلب بنجاح"
+  text=""
+  icon="success"
+  [focusCancel]="true"
+  (confirm)="onDone($event)">
+</swal>

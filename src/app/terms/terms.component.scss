@@ -1,0 +1,50 @@
+.stunning-header-bg1 {
+  background-image: url("../../assets/web/img/landing-users.png");
+}
+
+.stunning-header {
+  margin: -20px -17px 5px 2px;
+}
+
+.header--standard.header--standard-landing {
+  top: unset !important;
+}
+
+.content-bg-wrap:before {
+  content: '';
+
+  background-color: rgb(255, 161, 0, 0.94);
+}
+
+.stunning-header .content-bg-wrap {
+  z-index: 0;
+}
+
+.card {
+  background-color: #edf2f6;
+}
+
+.card-footer,
+.card-header {
+  background-color: #edf2f6;
+}
+
+.accordion-faqs .card-header {
+  padding: 25px 0;
+  border: none;
+  border-top: 1px solid #e6ecf5;
+}
+
+.accordion-faqs .card-header a {
+  justify-content: flex-end;
+}
+
+.accordion-faqs .collapse {
+  margin-bottom: 20px;
+}
+
+.accordion-faqs .collapse {
+  p {
+    text-align: right;
+  }
+}

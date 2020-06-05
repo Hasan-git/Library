@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes breadcrumb">
+        <strong>
+          ادارة الاجتماعات
+        </strong>
+        /
+        <span>
+          جدول الاجتماعات
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+
+    <!-- CONTENT -->
+    <div class="col col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes ">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <!-- / CONTENT -->
+
+
+    <!-- MENU -->
+    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes ui-block-content">
+
+        <!-- ITEM -->
+        <div fxLayout="column">
+
+          <div class="nav-item" [routerLink]="['/meetings','overview']" [routerLinkActive]="['active']">
+            <i class="fa fa-desktop ml-3"></i>
+            اللوحة الرئيسية
+          </div>
+
+          <div class="nav-item" [routerLink]="['/meetings','schedule']" [routerLinkActive]="['active']">
+            <i class="fa fa-desktop ml-3"></i>
+            جدول الاجتماعات
+          </div>
+
+          <div class="nav-item">
+            <i class="fa fa-comments ml-3"></i>
+            ادارة قاعات
+          </div>
+
+          <div class="nav-item">
+            <i class="fa fa-database ml-3"></i>
+            مستلزمات
+          </div>
+
+          <div class="nav-item">
+            <i class="fa fa-chart-line ml-3"></i>
+            تقارير
+          </div>
+        </div>
+        <!-- ITEM -->
+
+
+      </div>
+    </div>
+    <!-- / MENU -->
+
+  </div>
+</div>

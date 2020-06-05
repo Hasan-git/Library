@@ -1,0 +1,78 @@
+<div class="container p-0">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="ui-block responsive-flex1200">
+
+        <div class="ui-block-title">
+          <!-- <a href="javascript:void(0)" class="btn btn-primary btn-md-2 float-left">ابحث</a> -->
+
+          <form class="w-search float-left m-0" fxLayout="row" style="direction: ltr;">
+
+            <div class="icons-container">
+              <i class="fa fa-info-circle info" style="color: Dodgerblue;"> </i>
+              <mat-icon class="icon-views" (click)="view = 2">apps</mat-icon>
+              <mat-icon class="icon-views" (click)="view = 1">subject</mat-icon>
+            </div>
+
+            <!-- <div class="form-group with-button m-0">
+              <input class="form-control rtl-fixes" style="min-width:250px;" type="text" placeholder="البحث في المشاريع ">
+              <button>
+                <svg class="olymp-magnifying-glass-icon">
+                  <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-magnifying-glass-icon"></use>
+                </svg>
+              </button>
+            </div> -->
+
+          </form>
+
+          <div class="float-right" fxLayout="row">
+            <div class="btn btn-grey ml-2 cursor-pointer" fxLayout="row" fxLayoutAlign="center center" [matMenuTriggerFor]="menu">
+              <mat-icon style="margin-left: 5px;">arrow_drop_down</mat-icon>
+              <span style="font-size: 14px;">اضف محتوى</span>
+            </div>
+
+            <mat-menu #menu="matMenu" class="rtl-menu">
+              <button mat-menu-item>
+                رفع ملف
+                <mat-icon class="m-0 ml-1">cloud_upload</mat-icon>
+              </button>
+              <button mat-menu-item>
+                اضف محتوى
+                <mat-icon class="m-0 ml-1">note_add</mat-icon>
+              </button>
+            </mat-menu>
+
+            <a href="javascript:void(0)" [routerLink]="['/project-new']" class="btn btn-grey" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon style="margin-left: 5px;">folder_open</mat-icon>
+              <span style="font-size: 14px;">اضف قاعدة</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-0">
+  <div class="row">
+
+    <div class="col col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12" *ngIf="view == 1">
+      <div class="ui-block view-list">
+        <app-list-view></app-list-view>
+      </div>
+    </div>
+
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" *ngIf="view == 2">
+      <div class="ui-block view-list">
+        <app-box-view></app-box-view>
+      </div>
+    </div>
+
+    <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 pane-container" *ngIf="view == 1">
+      <div class="ui-block pane">
+        <app-pane></app-pane>
+      </div>
+    </div>
+
+  </div>
+</div>
