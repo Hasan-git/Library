@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PausableObservable, pausable } from 'rxjs-pausable';
 import { Subject, interval } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 declare var $;
 
 @Component({
@@ -12,9 +13,19 @@ export class EmployeeMonthComponent implements OnInit {
 
   paused = true;
   pausable: PausableObservable<number>;
-  constructor() { }
+
+  type = null;
+  constructor(
+    private route: ActivatedRoute
+  ) {
+    this.route.params.subscribe(e => {
+      this.type = e.type
+      console.log(this.type)
+    })
+  }
 
   ngOnInit() {
+
 
   }
 

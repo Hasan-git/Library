@@ -66,10 +66,19 @@
         </li>
 
         <li>
-          <a href="" [routerLink]="['/employee-month']">
+          <a href="" [routerLink]="['/employee-month','quarterly']">
             <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
-              data-original-title="موظف الشهر">
-              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use>
+              data-original-title="تصويت فصلي">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-trophy-icon"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="" [routerLink]="['/employee-month','غثشقمغ']">
+            <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+              data-original-title="تصويت سنوي">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-thunder-icon"></use>
             </svg>
           </a>
         </li>
@@ -207,12 +216,22 @@
         </li>
 
         <li>
-          <a href="" [routerLink]="['/employee-month']">
+          <a href="" [routerLink]="['/employee-month','quarterly']">
             <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
-              data-original-title="موظف الشهر">
-              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use>
+              data-original-title="تصويت فصلي">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-trophy-icon"></use>
             </svg>
-            <span class="left-menu-title">موظف الشهر</span>
+            <span class="left-menu-title">تصويت فصلي</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="" [routerLink]="['/employee-month','yearly']">
+            <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+              data-original-title="تصويت سنوي">
+              <use attr.xlink:href="{{svgUrl}}svg-icons/sprites/icons.svg#olymp-thunder-icon"></use>
+            </svg>
+            <span class="left-menu-title">تصويت سنوي</span>
           </a>
         </li>
 

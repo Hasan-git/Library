@@ -50,7 +50,7 @@ const appRoutes: Routes = [
         loadChildren: () => import('./meetings/meetings.module').then(m => m.MeetingsModule)
       },
       {
-        path: 'employee-month',
+        path: 'employee-month/:type',
         loadChildren: () => import('./employee-month/employee-month.module').then(m => m.EmployeeMonthModule)
       },
       { path: 'contacts', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule) },

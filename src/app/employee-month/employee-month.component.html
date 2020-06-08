@@ -3,9 +3,9 @@
     <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
       <div class="rtl-fixes rtl-dir-fixes breadcrumb">
         <strong>
-          موظف الشهر
+          {{ type == 'quarterly' || !type ? "التصويت الفصلي" : "التصويت السنوي" }}
         </strong>
-        /
+         /
         <span>
           تصويت
         </span>
