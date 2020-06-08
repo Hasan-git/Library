@@ -1,0 +1,43 @@
+.stunning-header-bg1 {
+  background-image: url("../../assets/web/img/landing-users.png");
+}
+*{
+  direction: rtl;
+}
+
+.stunning-header {
+  margin: -20px -17px 5px 2px;
+}
+.edit-my-poll-popup .edit-my-poll-head .poll-img {
+  margin-right: 337px !important;
+}
+.table-careers .head span {
+  font-size: 15px !important;
+}
+.table-careers li:hover {
+  background-color: #e6ecf5;
+}
+.header--standard.header--standard-landing {
+  top: unset !important;
+}
+
+.content-bg-wrap:before {
+  content: '';
+
+  background-color: rgb(255, 161, 0, 0.94);
+}
+.table-careers li {
+  display: table;
+  width: 100%;
+  padding: 30px 35px;
+  border: 1px solid #e6ecf5;
+  background-color: white;
+  margin-top: 18px;
+  box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+  border-radius: 5px;
+  transition: background-color .3s ease;
+}
+
+.stunning-header .content-bg-wrap {
+  z-index: 0;
+}
