@@ -23,7 +23,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container tabs">
   <div class="row">
     <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
       <mat-tab-group class="rtl-dir-fixes rtl-fixes tab-g">
@@ -235,6 +235,233 @@
         </mat-tab>
 
 
+        <mat-tab label="ملفات" class="">
+          <div class="files-tab" fxLayout="row">
+
+            <!-- FILTER -->
+            <div class="filter p-2" fxFlex="28">
+              <h4>فلتر</h4>
+              <div fxLayout="column">
+
+                <!-- name -->
+                <div>
+                  <div class="form-group label-floating">
+                    <label class="control-label">اسم الملف</label>
+                    <input class="form-control" placeholder="" type="text" value="" autocomplete="off">
+                    <span class="material-input"></span>
+                  </div>
+                </div>
+                <!-- name -->
+
+                <!-- department -->
+                <div>
+                  <div class="form-group label-floating">
+                    <label class="control-label">حجم الملف</label>
+                    <div fxLayout="row">
+                      <input class="form-control" style="max-width: 100px;" placeholder="من" type="text" value="" autocomplete="off">
+                      <input class="form-control mr-3" style="max-width: 100px;" placeholder="الى" type="text" value="" autocomplete="off">
+                    </div>
+
+                    <span class="material-input"></span>
+                  </div>
+                </div>
+                <!-- department -->
+
+                <!-- department -->
+                <div>
+                  <div class="form-group label-floating">
+                    <label class="control-label">تاريخ الاضافة</label>
+                    <input class="form-control" placeholder="" type="text" value="" autocomplete="off">
+                    <span class="material-input"></span>
+                  </div>
+                </div>
+                <!-- department -->
+
+
+                <!-- department -->
+                <div>
+                  <div class="form-group label-floating">
+                    <label class="control-label">مالك الملف</label>
+                    <input class="form-control" placeholder="" type="text" value="" autocomplete="off">
+                    <span class="material-input"></span>
+                  </div>
+                </div>
+                <!-- department -->
+
+                <!-- department -->
+                <div>
+                  <div class="form-group label-floating">
+                    <label class="control-label">حالة المشاركة</label>
+                   <select>
+                     <option>عام</option>
+                     <option>خاص</option>
+                   </select>
+                    <span class="material-input"></span>
+                  </div>
+                </div>
+                <!-- department -->
+
+              </div>
+            </div>
+            <!-- / FILTER -->
+
+            <div class="splitter" fxFlex="2">
+              <mat-icon>arrow_left</mat-icon>
+            </div>
+
+            <!-- SEARCH SECTION-->
+            <div class="search-result" fxFlex="70">
+
+              <!-- RESULT -->
+              <div class="birthday-item inline-items">
+
+                <div class="author-thumb">
+                  <img src="assets/images/excel-64.png" alt="author">
+                </div>
+
+                <!-- DETAILS -->
+                <div class="birthday-author-name">
+
+                  <div fxLayout="row">
+                    <a href="javascript:void(0)" class="h6 author-name">النهج العام للشركة</a>
+                    <div fxLayout="row" class="pr-2">
+                      <mat-icon class="location-icon">perm_identity</mat-icon>
+                      <span>ساره كرم</span>
+                    </div>
+                  </div>
+                  <div fxLayout="row">
+                    <div class="birthday-date">16 يناير 1989</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"><span>200 </span> <span>KB</span></div>
+                    <div class="divier"></div>
+                    <div class="birthday-date">تعليقات: 305</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"> النقاط: 1204 </div>
+                  </div>
+                </div>
+                <!-- DETAILS -->
+
+                <div class="arrow">
+                  <mat-icon class="">keyboard_arrow_left</mat-icon>
+                </div>
+
+              </div>
+              <!-- / RESULT -->
+
+               <!-- RESULT -->
+               <div class="birthday-item inline-items">
+
+                <div class="author-thumb">
+                  <img src="assets/images/excel-64.png" alt="author">
+                </div>
+
+                <!-- DETAILS -->
+                <div class="birthday-author-name">
+
+                  <div fxLayout="row">
+                    <a href="javascript:void(0)" class="h6 author-name">تحديد الاولويات</a>
+                    <div fxLayout="row" class="pr-2">
+                      <mat-icon class="location-icon">perm_identity</mat-icon>
+                      <span>جاد كرم</span>
+                    </div>
+                  </div>
+                  <div fxLayout="row">
+                    <div class="birthday-date">16 فبراير 2020</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"><span>100 </span> <span>KB</span></div>
+                    <div class="divier"></div>
+                    <div class="birthday-date">تعليقات: 105</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"> النقاط: 204 </div>
+                  </div>
+                </div>
+                <!-- DETAILS -->
+
+                <div class="arrow">
+                  <mat-icon class="">keyboard_arrow_left</mat-icon>
+                </div>
+
+              </div>
+              <!-- / RESULT -->
+
+               <!-- RESULT -->
+               <div class="birthday-item inline-items">
+
+                <div class="author-thumb">
+                  <img src="assets/images/word-64.png" alt="author">
+                </div>
+
+                <!-- DETAILS -->
+                <div class="birthday-author-name">
+
+                  <div fxLayout="row">
+                    <a href="javascript:void(0)" class="h6 author-name">الاليات المتبعة</a>
+                    <div fxLayout="row" class="pr-2">
+                      <mat-icon class="location-icon">perm_identity</mat-icon>
+                      <span>شادي فواز</span>
+                    </div>
+                  </div>
+                  <div fxLayout="row">
+                    <div class="birthday-date">12 فبراير 2020</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"><span>300 </span> <span>KB</span></div>
+                    <div class="divier"></div>
+                    <div class="birthday-date">تعليقات: 123</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"> النقاط: 104 </div>
+                  </div>
+                </div>
+                <!-- DETAILS -->
+
+                <div class="arrow">
+                  <mat-icon class="">keyboard_arrow_left</mat-icon>
+                </div>
+
+              </div>
+              <!-- / RESULT -->
+
+              <!-- RESULT -->
+              <div class="birthday-item inline-items">
+
+                <div class="author-thumb">
+                  <img src="assets/images/ppt-64.png" alt="author">
+                </div>
+
+                <!-- DETAILS -->
+                <div class="birthday-author-name">
+
+                  <div fxLayout="row">
+                    <a href="javascript:void(0)" class="h6 author-name">استعراض المنتج الذهبي</a>
+                    <div fxLayout="row" class="pr-2">
+                      <mat-icon class="location-icon">perm_identity</mat-icon>
+                      <span>ديانا ضيا</span>
+                    </div>
+                  </div>
+                  <div fxLayout="row">
+                    <div class="birthday-date">11 مارس 2020</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"><span>120 </span> <span>KB</span></div>
+                    <div class="divier"></div>
+                    <div class="birthday-date">تعليقات: 10</div>
+                    <div class="divier"></div>
+                    <div class="birthday-date"> النقاط: 15 </div>
+                  </div>
+                </div>
+                <!-- DETAILS -->
+
+                <div class="arrow">
+                  <mat-icon class="">keyboard_arrow_left</mat-icon>
+                </div>
+
+              </div>
+              <!-- / RESULT -->
+
+            </div>
+            <!-- / SEARCH SECTION-->
+
+
+          </div>
+        </mat-tab>
         <mat-tab label="مجموعات"> مجموعات </mat-tab>
         <mat-tab label="مشاريع"> مشاريع</mat-tab>
         <mat-tab label="مدونات"> مدونات </mat-tab>

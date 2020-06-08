@@ -8,6 +8,7 @@
   position: unset;
   margin-bottom: 0px;
   margin-right: 6px;
+  font-size: 14px;
 }
 
 .filter {
@@ -42,7 +43,7 @@
 
 .author-name {
   // margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
@@ -55,7 +56,7 @@
 }
 
 .birthday-item .birthday-date {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .birthday-item {
@@ -83,4 +84,13 @@
   vertical-align: 1px;
   margin-left: 0;
   margin-right: auto;
+}
+
+
+.files-tab{
+  img{
+    border-radius: 0;
+    height: 35px;
+    opacity: 0.7;
+  }
 }
