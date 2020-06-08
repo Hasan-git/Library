@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+      <div class="rtl-fixes rtl-dir-fixes breadcrumb">
+        <strong>
+          الهيكل التنظيمي
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="ui-block responsive-flex1200">
+
+        <div class="ui-block-title">
+          <a href="javascript:void(0)" class="btn btn-primary btn-md-2 float-left">ابحث</a>
+
+          <form class="w-search float-left m-0" fxLayout="row">
+            <div class="form-group with-button m-0">
+              <input class="form-control rtl-fixes" style="min-width:250px;" type="text" placeholder="بحث">
+              <button>
+                <svg class="olymp-magnifying-glass-icon">
+                  <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-magnifying-glass-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="float-right" fxLayout="row">
+            <a href="javascript:void(0)" [routerLink]="['/project-new']" class="btn btn-grey" fxLayout="row" fxLayoutAlign="center center">
+              <span style="font-size: 14px;">السجل</span>
+              <mat-icon class="edit-btn" style="margin-left: 5px;">timeline</mat-icon>
+            </a>
+            <a href="javascript:void(0)" [routerLink]="['/project-report']" class="btn btn-grey" fxLayout="row" fxLayoutAlign="center center">
+              <span style="font-size: 14px;">تعديل</span>
+              <mat-icon style="margin-left: 5px;">edit</mat-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="e-container">
+    <div id="chart-container"></div>
+  </div>
+</div>

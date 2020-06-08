@@ -54,6 +54,7 @@ const appRoutes: Routes = [
         loadChildren: () => import('./employee-month/employee-month.module').then(m => m.EmployeeMonthModule)
       },
       { path: 'contacts', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule) },
+      { path: 'orgchart', loadChildren: () => import('./orgchart/orgchart.module').then(m => m.OrgchartModule) },
     ]
   },
   { path: '**', redirectTo: '/profile', pathMatch: 'full' },

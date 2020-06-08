@@ -1,7 +1,67 @@
+app-orgchart {
+
+  #chart-container {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    // height: 420px;
+    width: calc(100% - 24px);
+    border: 2px dashed #aaa;
+    border-radius: 5px;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .orgchart .node .title {
+    font-size: 12px !important;
+  }
+
+  .orgchart .node {
+    width: 150px;
+  }
+
+  .orgchart .node .title {
+    width: unset;
+    height: unset;
+    padding: 5px 0px;
+    background-color: rgb(49, 149, 197);
+
+    .oci {
+      display: none;
+    }
+  }
+
+  .orgchart .node .content {
+    border: none;
+    font-size: 13px;
+    height: 100%;
+    min-height: 20px;
+    // background: #25b4fb;
+    // color: #fff;
+    border-radius: 0px;
+    padding: 5px 0px;
+    background: #d6e7fb;
+    color: #1f1e1e;
+    cursor: pointer;
+  }
+
+  .orgchart .node .note {
+    min-height: 20px;
+    background-color: #fff;
+    font-size: 13px;
+    padding: 3px 0px;
+  }
+
+  .orgchart {
+    background-image: none;
+  }
+}
 
 .forums-table thead {
   background-color: #ffa100;
 }
+
 .fa.down {
   color: #ff6a7f;
 }
