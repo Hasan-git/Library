@@ -16,7 +16,13 @@ import { ProjectsModule } from './projects/projects.module';
 import { SearchModule } from './search/search.module';
 import { SharedMaterialModule } from './blocks/common/material-shared-module';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-
+// firebase imports, omit what you don't need for your app
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorage,AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from 'src/environments/environment';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +34,11 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     FlexLayoutModule,
     BrowserAnimationsModule,
     SharedMaterialModule,
-
-
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
     HeaderModule,
     PreloadModule,
     NavigationSidebarRightModule,
@@ -42,7 +51,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     // ShellModule,
 
   ],
-  providers: [],
+  providers: [AngularFirestore,AngularFireStorage],
   bootstrap: [
     ShellComponent
   ]
