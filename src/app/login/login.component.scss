@@ -24,6 +24,17 @@
 }
 
 .form-group.has-error:after {
-
   background-color: #f9255300;
+}
+
+.form-group.label-floating label.control-label,
+.form-group.label-placeholder label.control-label {
+  right: 20px;
+  left: unset;
+}
+.remember{
+  text-align: right;
+}
+.forgot{
+  float: left;
 }
