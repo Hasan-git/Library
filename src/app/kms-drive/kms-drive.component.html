@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+<input  id="importFile" type="file" (change)="detectFiles($event)" multiple>
+<label #labelImport for="importFile"><i class="fas fa-search"></i> Choose file</label>
+
+<button class="btn btn-outline-secondary mt-2" [disabled]="!selectedFiles" (click)="uploadMulti()" style="color: white;"
+  [ngStyle]="{'border-color':uploadeddata ? 'red' : '#EDF2F6' }">
+
+  Upload
+</button>
+<div *ngIf="currentUpload">
+  <div class="progress full-width mt-2">
+    <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+  </div>
+  Progress: {{currentUpload?.name}} | {{currentUpload?.progress | number :'1.2-2'}}% Complete
+</div>
+</div>
+</div>
+<div class="row" style="margin: 10px;">
+  <div class="col-sm-12">
+    <div class="card mt-4">
+      <div class="card-body">
+          <h4 class="card-title">Quick Access</h4>
+      </div>
+      <div class="row" style="padding:11px" >
+        <div class="col-sm-2 text-center"  *ngFor="let item of dtuploaded">
+         <img src="{{pptimage}}" style="cursor: pointer;" (click)="DownloadFirebase(item)" class="mb-1" width="80px">
+          <br>
+          <span style="font-weight: 500;">{{item.name}}</span>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>

@@ -54,9 +54,13 @@ const appRoutes: Routes = [
         loadChildren: () => import('./employee-month/employee-month.module').then(m => m.EmployeeMonthModule)
       },
       { path: 'contacts', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule) },
+      { path: 'jobs', loadChildren: () => import('./jobs/jobs.module').then(m => m.JobsModule) },
+      { path: 'user-management', loadChildren: () => import('./user-management/user-management.module').then(m => m.UserManagementModule) },
       { path: 'orgchart', loadChildren: () => import('./orgchart/orgchart.module').then(m => m.OrgchartModule) },
+      { path: 'kms-drive', loadChildren: () => import('./kms-drive/kms-drive.module').then(m => m.KmsDriveModule) },
     ]
   },
+
   { path: '**', redirectTo: '/profile', pathMatch: 'full' },
 ];
 

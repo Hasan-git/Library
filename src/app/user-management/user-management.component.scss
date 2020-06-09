@@ -1,0 +1,59 @@
+.forum-item img {
+  border-radius: 50%;
+  height: 55px;
+  float: right !important;
+}
+
+.forum-item .content {
+  padding: 12px 11px;
+}
+
+.forums-table thead th {
+  font-weight: 500;
+}
+
+.forums-table td {
+  padding: 8px 20px;
+}
+
+.author-freshness {
+  direction: ltr !important;
+}
+
+.delete {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #e28080;
+}
+
+.edit {
+  font-size: 16px;
+}
+.mat-chip.mat-standard-chip {
+  background-color: #e0e0e0;
+  color: rgba(0,0,0,.87);
+}
+
+.mat-standard-chip {
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 16px;
+  align-items: center;
+  cursor: default;
+  min-height: 32px;
+  height: 1px;
+}
+.mat-chip {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.mat-chip {
+  font-size: 14px;
+  font-weight: 500;
+}
