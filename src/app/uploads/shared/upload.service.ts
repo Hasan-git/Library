@@ -12,19 +12,19 @@ export class UploadService {
 
   constructor(private db: AngularFirestore) { }
 
-  private basePath:string = '/uploads';
-  filestobeadded:any[]=[];
+  private basePath: string = '/uploads';
+  filestobeadded: any[] = [];
   uploads: AngularFireList<Upload[]>;
 
   pushUpload(upload: Upload) {
-    this.filestobeadded=[];
+    this.filestobeadded = [];
     let storageRef = firebase.storage().ref();
     let uploadTask = storageRef.child(`${this.basePath}/${upload.file.name}`).put(upload.file);
 
     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
       (snapshot) => {
-      // upload in progress
-      upload.progress = (uploadTask.snapshot.bytesTransferred / uploadTask.snapshot.totalBytes) * 100 // CHANGEMENT IS HERE
+        // upload in progress
+        upload.progress = (uploadTask.snapshot.bytesTransferred / uploadTask.snapshot.totalBytes) * 100 // CHANGEMENT IS HERE
       },
       (error) => {
         // upload failed
@@ -32,15 +32,17 @@ export class UploadService {
       },
       () => {
         // upload success
-       uploadTask.snapshot.ref.getDownloadURL().then((url)=>{
-          upload.url=url;
-          var filename=upload.file.name.split('.');
+        uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+          upload.url = url;
+
+          var filename = upload.file.name.split('.');
           upload.name = filename[0];
           var ext = upload.file.name.substr(upload.file.name.lastIndexOf('.') + 1);
-          upload.extension=ext;
-         this.saveFileData(upload)
+          upload.extension = ext;
+          upload.size = upload.file.size
+          this.saveFileData(upload)
 
-          });
+        });
 
       }
     );
@@ -52,17 +54,19 @@ export class UploadService {
   public saveFileData(upload) {
 
     this.db.collection('Uploads').add({
-      name:upload.name,
-      extension:upload.extension,
-      path:upload.url
-
-      });
-      this.filestobeadded.push({
-        name:upload.name,
-        extension:upload.extension,
-        path:upload.url
-
-        })
+      name: upload.name,
+      extension: upload.extension,
+      path: upload.url,
+      size: upload.size,
+      lastModified: new Date().toString()
+    });
+    this.filestobeadded.push({
+      name: upload.name,
+      extension: upload.extension,
+      path: upload.url,
+      size: upload.size,
+      lastModified: new Date().toString()
+    })
     // this.db.list(`${this.basePath}/`).push(upload);
   }
 
@@ -81,7 +85,7 @@ export class UploadService {
 
   // Firebase files must have unique names in their respective storage dir
   // So the name serves as a unique key
-  private deleteFileStorage(name:string) {
+  private deleteFileStorage(name: string) {
     let storageRef = firebase.storage().ref();
     storageRef.child(`${this.basePath}/${name}`).delete()
   }

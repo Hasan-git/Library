@@ -1230,3 +1230,32 @@ app-new-workflow {
   }
 
 }
+
+app-drive-file-table {
+  .svg-inline--fa {
+    // display: none;
+    opacity: 0;
+    float: left;
+    margin-top: 5px;
+  }
+
+  .dropdown-item {
+    text-align: right;
+    direction: rtl;
+  }
+
+  .selected {
+    .svg-inline--fa {
+      opacity: 1;
+      color: rgb(46, 45, 45);
+    }
+
+    .glyphicon-ok::before {
+      content: "";
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 900;
+      color: #515365;
+      content: "";
+    }
+  }
+}

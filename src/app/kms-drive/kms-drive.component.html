@@ -1,34 +1,78 @@
 <div class="container">
   <div class="row">
-<input  id="importFile" type="file" (change)="detectFiles($event)" multiple>
-<label #labelImport for="importFile"><i class="fas fa-search"></i> Choose file</label>
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="ui-block responsive-flex1200">
+        <div class="ui-block-title">
 
-<button class="btn btn-outline-secondary mt-2" [disabled]="!selectedFiles" (click)="uploadMulti()" style="color: white;"
-  [ngStyle]="{'border-color':uploadeddata ? 'red' : '#EDF2F6' }">
 
-  Upload
-</button>
-<div *ngIf="currentUpload">
-  <div class="progress full-width mt-2">
-    <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
-  </div>
-  Progress: {{currentUpload?.name}} | {{currentUpload?.progress | number :'1.2-2'}}% Complete
-</div>
-</div>
-</div>
-<div class="row" style="margin: 10px;">
-  <div class="col-sm-12">
-    <div class="card mt-4">
-      <div class="card-body">
-          <h4 class="card-title">Quick Access</h4>
-      </div>
-      <div class="row" style="padding:11px" >
-        <div class="col-sm-2 text-center"  *ngFor="let item of dtuploaded">
-         <img src="{{pptimage}}" style="cursor: pointer;" (click)="DownloadFirebase(item)" class="mb-1" width="80px">
-          <br>
-          <span style="font-weight: 500;">{{item.name}}</span>
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#create-photo-album" class="btn btn-primary btn-md-2">ابحث</a>
+
+          <form class="w-search">
+            <div class="form-group with-button">
+              <input class="form-control rtl-fixes" type="text" placeholder="البحث عن ملف">
+              <button>
+                <svg class="olymp-magnifying-glass-icon">
+                  <use xlink:href="assets/web/svg-icons/sprites/icons.svg#olymp-magnifying-glass-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
   </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h4 class="card-title">الملفات النشطة</h4>
+        </div>
+
+        <div class="quick-container">
+          <app-drive-quick-acess></app-drive-quick-acess>
+        </div>
+
+        <div class="quick-container mt-5">
+          <app-drive-file-table></app-drive-file-table>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="row" style="padding:11px">
+          <div class="col-sm-2 text-center" *ngFor="let item of dtuploaded">
+            <img src="{{pptimage}}" style="cursor: pointer;" (click)="DownloadFirebase(item)" class="mb-1" width="80px">
+            <br>
+            <span style="font-weight: 500;">{{item.name}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <input id="importFile" type="file" (change)="detectFiles($event)" multiple>
+    <label #labelImport for="importFile"><i class="fas fa-search"></i> Choose file</label>
+
+    <button class="btn btn-outline-secondary mt-2" [disabled]="!selectedFiles" (click)="uploadMulti()" style="color: white;"
+      [ngStyle]="{'border-color':uploadeddata ? 'red' : '#EDF2F6' }">
+
+      Upload
+    </button>
+    <div *ngIf="currentUpload">
+      <div class="progress full-width mt-2">
+        <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+      </div>
+      Progress: {{currentUpload?.name}} | {{currentUpload?.progress | number :'1.2-2'}}% Complete
+    </div>
   </div>
 </div>

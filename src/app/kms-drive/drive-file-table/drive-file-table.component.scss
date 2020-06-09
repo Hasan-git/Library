@@ -1,0 +1,24 @@
+.forums-table thead {
+  background-color: unset !important;
+}
+
+.forums-table thead th {
+  color: rgba(0, 0, 0, .54) !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.forum {
+  min-width: 160px;
+  color: #3b3a3ab8;
+  font-weight: 600;
+}
+
+.forums-table td {
+  padding: 14px 25px;
+}
+
+.forums-table tr {
+  border-bottom: 1px solid #dadce0;
+  border-top: 1px solid #dadce0;
+}

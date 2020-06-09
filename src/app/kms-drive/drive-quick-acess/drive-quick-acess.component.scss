@@ -1,0 +1,65 @@
+.f-box {
+  margin: 5px;
+  border: 1px solid #dadce0;
+  display: flex;
+  flex-direction: column;
+  width: 235px;
+  border-radius: 6px;
+
+  .head {
+    height: 118px;
+    overflow: hidden;
+    text-align: center;
+    padding: 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .foot {
+    padding: 13px 16px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #dadce0;
+
+    .filename {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+      direction: rtl;
+
+
+      img {
+        height: 17px;
+      }
+
+      .name {
+        font-size: 13px;
+        font-weight: 500;
+        overflow: hidden;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: rgba(0, 0, 0, .72);
+        line-height: 20px;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+
+    .owner {
+      color: rgba(0, 0, 0, .54);
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 500;
+      overflow: hidden;
+      position: relative;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: right !important;
+    }
+  }
+}

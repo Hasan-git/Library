@@ -20,7 +20,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireStorage,AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 @NgModule({
@@ -51,7 +51,7 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
     // ShellModule,
 
   ],
-  providers: [AngularFirestore,AngularFireStorage],
+  providers: [AngularFirestore, AngularFireStorage],
   bootstrap: [
     ShellComponent
   ]
