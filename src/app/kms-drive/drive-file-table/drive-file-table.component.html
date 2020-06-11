@@ -182,7 +182,7 @@
       <td class="freshness">
         <div fxLayout="row">
           <div> KB </div>
-          <div class="mr-1"> {{file.size / 1000 | number : '1.0-0' || 0}} </div>
+          <div class="mr-1"> {{file.size / 1000 | number : '1.0-0' || "0"}} </div>
         </div>
       </td>
       <td class="action">

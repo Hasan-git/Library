@@ -23,6 +23,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
     BlogsModule,
     ProjectsModule,
     SearchModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     // ShellModule,
 
   ],
