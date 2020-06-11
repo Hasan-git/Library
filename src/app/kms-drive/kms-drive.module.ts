@@ -9,6 +9,10 @@ import { DriveQuickAcessComponent } from './drive-quick-acess/drive-quick-acess.
 import { DriveFileTableComponent } from './drive-file-table/drive-file-table.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { NgxDocViewerModule } from 'ngx-doc-viewer';
+import { GalleryModule } from '@ngx-gallery/core';
+import { LightboxModule } from  '@ngx-gallery/lightbox';
+import { ImageViewerModule } from '@hallysonh/ngx-imageviewer';
 
 
 @NgModule({
@@ -22,6 +26,10 @@ import { AngularFireStorage } from '@angular/fire/storage';
     KmsDriveRoutingModule,
     FlexLayoutModule,
     SharedMaterialModule,
+    NgxDocViewerModule,
+    GalleryModule,
+    LightboxModule,
+    ImageViewerModule
   ],
   providers: [AngularFirestore, AngularFireStorage]
 })

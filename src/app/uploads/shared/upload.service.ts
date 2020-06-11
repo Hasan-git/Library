@@ -7,7 +7,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
-@Injectable()
 export class UploadService {
 
   constructor(private db: AngularFirestore) { }
@@ -20,6 +19,7 @@ export class UploadService {
     this.filestobeadded = [];
     let storageRef = firebase.storage().ref();
     let uploadTask = storageRef.child(`${this.basePath}/${upload.file.name}`).put(upload.file);
+
 
     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
       (snapshot) => {
@@ -48,12 +48,20 @@ export class UploadService {
     );
   }
 
+  public deleteFile(filename) {
+    let storageRef = firebase.storage().ref();
+    storageRef.child(`${this.basePath}/${filename}`).delete()
+  }
+
 
 
   // Writes the file details to the realtime db
   public saveFileData(upload) {
 
-    this.db.collection('Uploads').add({
+    const id = this.generateObjectId()
+
+    this.db.collection('Uploads').doc(id).set({
+      id,
       name: upload.name,
       extension: upload.extension,
       path: upload.url,
@@ -89,4 +97,11 @@ export class UploadService {
     let storageRef = firebase.storage().ref();
     storageRef.child(`${this.basePath}/${name}`).delete()
   }
+
+  private generateObjectId() {
+    const timestamp = (new Date().getTime() / 1000 | 0).toString(16);
+    return timestamp + 'xxxxxxxxxxxxxxxx'.replace(/[x]/g, function () {
+      return (Math.random() * 16 | 0).toString(16);
+    }).toLowerCase();
+  };
 }

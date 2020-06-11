@@ -1,3 +1,4 @@
+import { DriveFile } from './../blocks/interface/driveFile';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Upload, FileUploaded } from '../uploads/shared/upload';
 import { UploadService } from '../uploads/shared/upload.service';
@@ -24,18 +25,20 @@ export class KmsDriveComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.db.collection("Uploads").valueChanges()
-      .subscribe(event => {
-        console.log(event)
-      });
+    // this.db.collection("Uploads").valueChanges()
+    //   .subscribe(event => {
+    //     console.log(event)
+    //   });
 
-    // this.db.collection('Uploads').get().subscribe(querySnapshot => {
-    //   querySnapshot.forEach(doc => {
-    //   console.log(doc.data())
+  }
 
-    //     this.dtuploaded.push(doc.data())
-    //   })
-    // })
+  upload(event) {
+    let files = event.target.files;
+    let filesIndex = _.range(files.length)
+    _.each(filesIndex, (idx) => {
+      this.currentUpload = new Upload(files[idx]);
+      this.upSvc.pushUpload(this.currentUpload)
+    })
   }
 
   uploadMulti() {
@@ -57,8 +60,8 @@ export class KmsDriveComponent implements OnInit {
     this.dtuploaded.forEach(x => {
       // doc.data() is never undefined for query doc snapshots
       if (x == item) {
-        // window.location.assign(doc.data().path);
-        window.open(x.path);
+        window.location.assign(x.path);
+        // window.open(x.path);
       }
     });
   }
@@ -72,7 +75,8 @@ export class KmsDriveComponent implements OnInit {
     this.labelImport.nativeElement.innerText = Array.from(this.selectedFiles)
       .map(f => f.name)
       .join(', ');
-
   }
+
+
 
 }

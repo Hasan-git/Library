@@ -4,10 +4,20 @@
       <div class="ui-block responsive-flex1200">
         <div class="ui-block-title">
 
+          <input #upld style="display: none;" type="file" (change)="upload($event)" multiple>
+          <!-- <a class="float-right" href="javascript:void(0)" (click)="upld.click()" data-toggle="modal" data-target="#create-photo-album" class="btn btn-primary btn-md-2">رفع</a> -->
 
-          <a href="javascript:void(0)" data-toggle="modal" data-target="#create-photo-album" class="btn btn-primary btn-md-2">ابحث</a>
+          <a href="javascript:void(0)" (click)="upld.click()" class="btn btn-grey float-right ml-2" fxLayout="row" fxLayoutAlign="center center">
+            <span style="font-size: 14px;">رفع</span>
+            <mat-icon style="margin-left: 5px;">cloud_upload</mat-icon>
+          </a>
 
-          <form class="w-search">
+          <a href="javascript:void(0)" class="btn btn-grey float-right" fxLayout="row" fxLayoutAlign="center center">
+            <span style="font-size: 14px;">اضف قاعدة</span>
+            <mat-icon style="margin-left: 5px;">folder_open</mat-icon>
+          </a>
+
+          <form class="w-search float-left">
             <div class="form-group with-button">
               <input class="form-control rtl-fixes" type="text" placeholder="البحث عن ملف">
               <button>
@@ -17,11 +27,32 @@
               </button>
             </div>
           </form>
+
+
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="container" [hidden]="!currentUpload || !currentUpload?.progress || currentUpload?.progress == 0 || currentUpload?.progress == 100 ">
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="ui-block responsive-flex1200 m-0">
+        <div class="ui-block-title">
+          <div *ngIf="currentUpload">
+            <div class="progress full-width mt-2">
+              <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+            </div>
+            <!-- Progress: {{currentUpload?.name}} | {{currentUpload?.progress | number :'1.2-2'}}% Complete -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="container">
   <div class="row">
@@ -57,8 +88,11 @@
   </div>
 </div>
 
+
+<!--
 <div class="container">
   <div class="row">
+
 
     <input id="importFile" type="file" (change)="detectFiles($event)" multiple>
     <label #labelImport for="importFile"><i class="fas fa-search"></i> Choose file</label>
@@ -75,4 +109,4 @@
       Progress: {{currentUpload?.name}} | {{currentUpload?.progress | number :'1.2-2'}}% Complete
     </div>
   </div>
-</div>
+</div> -->

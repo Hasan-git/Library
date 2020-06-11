@@ -12,6 +12,11 @@
   min-width: 160px;
   color: #3b3a3ab8;
   font-weight: 600;
+  cursor: pointer;
+
+  :hover {
+    color: #5981ae;
+  }
 }
 
 .forums-table td {
@@ -21,4 +26,9 @@
 .forums-table tr {
   border-bottom: 1px solid #dadce0;
   border-top: 1px solid #dadce0;
+}
+
+.doc-popup {
+  width: 70%;
+  height: 90%;
 }
