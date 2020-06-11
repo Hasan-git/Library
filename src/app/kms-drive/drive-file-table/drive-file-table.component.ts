@@ -6,8 +6,10 @@ import { Lightbox } from '@ngx-gallery/lightbox';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { takeUntil, map } from 'rxjs/operators';
 import { UploadService } from 'src/app/uploads/shared/upload.service';
+var mime = require('mime-types')
 
 declare var $;
+declare var download;
 
 @Component({
   selector: 'app-drive-file-table',
@@ -167,6 +169,31 @@ export class DriveFileTableComponent implements OnInit {
       .then(_ => {
         this.upSvc.deleteFile(`${file.name}.${file.extension}`)
       })
+  }
+
+
+  onStartedDownload(id) {
+    console.log(`Started downloading: ${id}`);
+  }
+
+  onFailed(error) {
+    console.log(`Download failed: ${error}`);
+  }
+
+
+
+  downloadFile(file: DriveFile) {
+
+    let filename = `${file.name}.${file.extension}`
+
+    var x = new XMLHttpRequest();
+    x.open("GET", file.path, true);
+    x.responseType = 'blob';
+    x.onload = function (e) {
+      download(x.response, filename, mime.lookup(file.extension)
+      );
+    }
+    x.send();
   }
 
 }

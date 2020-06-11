@@ -93,9 +93,14 @@ export class UploadService {
 
   // Firebase files must have unique names in their respective storage dir
   // So the name serves as a unique key
-  private deleteFileStorage(name: string) {
+  public deleteFileStorage(name: string) {
     let storageRef = firebase.storage().ref();
     storageRef.child(`${this.basePath}/${name}`).delete()
+  }
+
+   public getdownloadurl(name: string) {
+    let storageRef = firebase.storage().ref();
+    return storageRef.child(`${this.basePath}/${name}`).getDownloadURL()
   }
 
   private generateObjectId() {
