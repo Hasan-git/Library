@@ -44,7 +44,7 @@
     "mime-types": "^2.1.27",
     "ng2-charts": "^2.3.0",
     "ngx-doc-viewer": "^1.1.0",
-    "orgchart": "^2.1.10",
+    "orgchart": "^3.1.1",
     "rxjs": "~6.4.0",
     "rxjs-pausable": "^1.0.0",
     "sweetalert2": "^9.10.0",
